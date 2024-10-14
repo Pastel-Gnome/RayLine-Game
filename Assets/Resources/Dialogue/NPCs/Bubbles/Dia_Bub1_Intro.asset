@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Dia_Bub1_Intro
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: Talk to Bubbles.
+    segments:
+    - speakerName: Bubbles
+      dialogueText: Why, hello there! You must be new in town. My name's Bubbles.
+      speakerColor: {r: 0, g: 0.93546295, b: 1, a: 1}
+      nextBranch: {fileID: 0}
+      choices:
+      - {fileID: 11400000, guid: bcf3b41f168023b43b4b531fcf44cd20, type: 2}
+      - {fileID: 11400000, guid: 528e87061de19df469022eba5ab33b28, type: 2}
+      - {fileID: 11400000, guid: 7642b92118e1347448a069503606cd02, type: 2}

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Desc_NotNiceShrub
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: Look at shrub.
+    segments:
+    - speakerName: 
+      dialogueText: This is not a nice shrub.
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      nextBranch: {fileID: 0}
+      choices: []
+    - speakerName: 
+      dialogueText: Very pokey.
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      nextBranch: {fileID: 0}
+      choices: []
+    - speakerName: 
+      dialogueText: And it smells like cleaner. Nasty.
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      nextBranch: {fileID: 0}
+      choices:
+      - {fileID: 11400000, guid: 076aa2690be961541b6d348d19fc3496, type: 2}
+      - {fileID: 11400000, guid: c4840ee32b92f0147a9bf029b516d6eb, type: 2}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Dia_Bub3_AskAboutBubbles
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: Ask about Bubbles.
+    segments:
+    - speakerName: You
+      dialogueText: Nice to meet you, Bubbles! Where's your favorite place to hang
+        out?
+      speakerColor: {r: 1, g: 1, b: 1, a: 1}
+      nextBranch: {fileID: 0}
+      choices: []
+    - speakerName: Bubbles
+      dialogueText: I really like hanging out on the beach! It's just so calming
+        next to the waves.
+      speakerColor: {r: 0, g: 0.9372549, b: 1, a: 1}
+      nextBranch: {fileID: 11400000, guid: 77e4b648b5efba24fa62aa9615952e75, type: 2}
+      choices: []
