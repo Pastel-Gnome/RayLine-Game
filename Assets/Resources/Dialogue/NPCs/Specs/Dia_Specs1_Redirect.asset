@@ -17,16 +17,22 @@ MonoBehaviour:
     segments:
     - speakerName: You
       dialogueText: Hello! Do you know where I can find Ratsley?
-      speakerColor: {r: 1, g: 1, b: 1, a: 1}
+      speakerIcon: {fileID: 21300000, guid: 69245844120470745a477a90992dfc59, type: 3}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices: []
     - speakerName: Specs
       dialogueText: Oh, Ratsley?
-      speakerColor: {r: 0.9257641, g: 0, b: 1, a: 1}
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices: []
     - speakerName: Specs
       dialogueText: He's standing over by that house!
-      speakerColor: {r: 0.9257641, g: 0, b: 1, a: 1}
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices: []

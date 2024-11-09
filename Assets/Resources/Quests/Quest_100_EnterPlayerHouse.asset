@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
+  m_Name: Quest_100_EnterPlayerHouse
+  m_EditorClassIdentifier: 
+  questName: Settle In
+  questDescription: You're new in town! As the first step to becoming a community
+    member, you need to check out your house.
+  questGiver: Buddy
+  questID: 100
+  steps:
+  - {fileID: 11400000, guid: 46eba0c837542e8499162c7d4b4dff0b, type: 2}

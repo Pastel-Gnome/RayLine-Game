@@ -17,6 +17,8 @@ MonoBehaviour:
     segments:
     - speakerName: Bubbles
       dialogueText: See ya later then!
-      speakerColor: {r: 0, g: 0.9372549, b: 1, a: 1}
+      speakerIcon: {fileID: 21300000, guid: c795b26963c78c44eacbc9f26faef219, type: 3}
+      speakerBkg: {fileID: 21300000, guid: f141cdfebeeb0664faf7d619df162eb5, type: 3}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices: []

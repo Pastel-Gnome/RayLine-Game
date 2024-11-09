@@ -18,17 +18,26 @@ MonoBehaviour:
     - speakerName: You
       dialogueText: I only just arrived, so I'm not very familiar with the area.
         Do you know where my house is?
-      speakerColor: {r: 1, g: 1, b: 1, a: 1}
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      speakerIcon: {fileID: 21300000, guid: 69245844120470745a477a90992dfc59, type: 3}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices: []
     - speakerName: Bubbles
       dialogueText: Oh, it's real closeby. Just take that path to the east and keep
         going, you can't miss it.
-      speakerColor: {r: 0, g: 0.9372549, b: 1, a: 1}
+      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      speakerIcon: {fileID: 21300000, guid: c795b26963c78c44eacbc9f26faef219, type: 3}
+      speakerBkg: {fileID: 21300000, guid: f141cdfebeeb0664faf7d619df162eb5, type: 3}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices: []
     - speakerName: You
       dialogueText: Thanks!
       speakerColor: {r: 1, g: 1, b: 1, a: 1}
+      speakerIcon: {fileID: 21300000, guid: 69245844120470745a477a90992dfc59, type: 3}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 11400000, guid: 77e4b648b5efba24fa62aa9615952e75, type: 2}
+      actionIndex: -99
       choices: []

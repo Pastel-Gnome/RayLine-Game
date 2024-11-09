@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
+  m_Name: Quest_102_GetToBed
+  m_EditorClassIdentifier: 
+  questName: Get To Bed
+  questDescription: It's been a long day and you're feeling rather tired. You can
+    go to sleep inside of your house.
+  questGiver: 
+  questID: 102
+  steps:
+  - {fileID: 11400000, guid: c55dae560f8f3924983bff62ddad2b14, type: 2}

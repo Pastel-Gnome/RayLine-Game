@@ -17,8 +17,10 @@ MonoBehaviour:
     segments:
     - speakerName: Bubbles
       dialogueText: Hey there, what's up?
-      speakerColor: {r: 0, g: 0.9372549, b: 1, a: 1}
+      speakerIcon: {fileID: 21300000, guid: c795b26963c78c44eacbc9f26faef219, type: 3}
+      speakerBkg: {fileID: 21300000, guid: f141cdfebeeb0664faf7d619df162eb5, type: 3}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices:
       - {fileID: 11400000, guid: bcf3b41f168023b43b4b531fcf44cd20, type: 2}
       - {fileID: 11400000, guid: 528e87061de19df469022eba5ab33b28, type: 2}

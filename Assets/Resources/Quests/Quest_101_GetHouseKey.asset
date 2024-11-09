@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
+  m_Name: Quest_101_GetHouseKey
+  m_EditorClassIdentifier: 
+  questName: Find Your House Key
+  questDescription: It looks like your house is locked. You should look around to
+    see if the key is hidden anywhere.
+  questGiver: 
+  questID: 101
+  steps:
+  - {fileID: 11400000, guid: dd1b2e23ef88654438ecbe492c0c3dc9, type: 2}

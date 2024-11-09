@@ -17,6 +17,8 @@ MonoBehaviour:
     segments:
     - speakerName: You
       dialogueText: Oh, there's a key hanging on one of the branches!
-      speakerColor: {r: 1, g: 1, b: 1, a: 1}
+      speakerIcon: {fileID: 21300000, guid: 69245844120470745a477a90992dfc59, type: 3}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
+      actionIndex: 0
       choices: []
