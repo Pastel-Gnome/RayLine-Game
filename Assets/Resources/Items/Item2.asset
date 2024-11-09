@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8273ee90e9b6547bcde01512111d49, type: 3}
+  m_Name: Item2
+  m_EditorClassIdentifier: 
+  itemName: Torn Letter Piece
+  id: 2
+  description: A small piece of paper that used to be a part of Sally's love letter.
+    The letter 'U' is written especially thick.
+  sprite: {fileID: 0}
