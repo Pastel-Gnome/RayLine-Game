@@ -6,16 +6,31 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Prototyping/ForestHouse.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Prototyping/BeachKeyArea.unity
+    path: Assets/Scenes/Prototyping/OutsideAreas/BeachKeyArea.unity
     guid: 526db0f2bbd192749afd35bc63636b0d
   - enabled: 1
-    path: Assets/Scenes/Prototyping/InsideTest.unity
-    guid: cf2ba07d583a1aa4983c10c7545786b0
+    path: Assets/Scenes/Prototyping/OutsideAreas/ForestHouse.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Prototyping/PlayerStats.unity
-    guid: cb1903d3aa15d2e42bf40ae5ffede9d6
+    path: Assets/Scenes/Prototyping/OutsideAreas/TownArea.unity
+    guid: efdb7824fcb352b4fbdb2261a54a5f6d
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/InsideAreas/PlayerHouse.unity
+    guid: 43657f979ad0f6040873e00e93ce41ec
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/InsideAreas/PlaytestEnd.unity
+    guid: 43656b89e2fd30a49a345003a9d9c473
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/InsideAreas/SallyHouse.unity
+    guid: 5e90fc415ad7e70429e331311d7c14b8
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/InsideAreas/GeneralStore.unity
+    guid: 67b50e4e9600b574c94f07d8f5025e6a
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/DocumentationTest.unity
+    guid: 415b097989af6be4bbe3d57e7bad5799
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/DocumentationTest 1.unity
+    guid: 03ab5f95403b3ba439bbd6af18e487f8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 85ab92223303ee945b591102b7f56f3c, type: 2}
