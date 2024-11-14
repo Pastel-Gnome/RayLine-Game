@@ -24,6 +24,7 @@ public class DualGridTilemap : MonoBehaviour
 
 	// Provide the 16 tiles in the inspector
 	public Tile[] tiles;
+	public Tile[] randomFullTiles;
 
 	void Start()
 	{
@@ -75,9 +76,12 @@ public class DualGridTilemap : MonoBehaviour
 
 		Tuple<TileType, TileType, TileType, TileType> neighbourTuple = new(topLeft, topRight, botLeft, botRight);
 		Tile returnedTile = neighbourTupleToTile[neighbourTuple];
-        if (returnedTile == tiles[6]) // random chance to switch between variations of full tile
+        if (returnedTile == tiles[6] && randomFullTiles.Length > 0) // random chance to switch between variations of full tile
 		{
-			if (UnityEngine.Random.Range(0f,1f) > 0.5f) { returnedTile = tiles[15]; }
+			if (UnityEngine.Random.Range(0f,1f) > 0.7f)
+			{ 
+				returnedTile = randomFullTiles[UnityEngine.Random.Range(0, randomFullTiles.Length)];
+			}
 		}
 
         return returnedTile;
@@ -105,8 +109,4 @@ public class DualGridTilemap : MonoBehaviour
 	}
 }
 
-public enum TileType
-{
-	On,
-	Off
-}
+

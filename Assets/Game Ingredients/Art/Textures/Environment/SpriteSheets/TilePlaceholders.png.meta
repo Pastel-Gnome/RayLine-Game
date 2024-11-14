@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -193,6 +193,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TilePlaceholders_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ec3713febe87e4f8802147f58c5517
+      internalID: 1460414945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -208,6 +229,7 @@ TextureImporter:
       TilePlaceholders_1: 551126412
       TilePlaceholders_2: 1171847047
       TilePlaceholders_3: -2044852287
+      TilePlaceholders_4: 1460414945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
