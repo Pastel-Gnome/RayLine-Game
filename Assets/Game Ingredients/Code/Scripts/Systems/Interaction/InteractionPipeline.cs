@@ -38,4 +38,9 @@ public class InteractionPipeline : MonoBehaviour
 
 		DialogueManager.instance.StartDialogue(anomalyNode, new List<UnityEngine.Events.UnityEvent>());
 	}
+
+    public void QuitGame()
+    {
+        LevelLoader.instance.QuitGame();
+    }
 }

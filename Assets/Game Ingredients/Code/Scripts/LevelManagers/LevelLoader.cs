@@ -23,7 +23,10 @@ public class LevelLoader : MonoBehaviour
 			Destroy(gameObject);
 		}
 		SceneManager.sceneLoaded += OnSceneLoaded;
-		FindObjectOfType<PlayerInput>().currentActionMap.FindAction("Quit Game").performed += QuitGame;
+		PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+		if (playerInput != null){
+			playerInput.currentActionMap.FindAction("Quit Game").performed += OnQuitGame;
+		}
 		transition.Play(animBranchStart);
 	}
 
@@ -32,7 +35,11 @@ public class LevelLoader : MonoBehaviour
 		if (instance == this)
 		{
 			PlayerMovement.EnableMovement();
-			FindObjectOfType<PlayerInput>().currentActionMap.FindAction("Quit Game").performed += QuitGame;
+			PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+			if (playerInput != null)
+			{
+				playerInput.currentActionMap.FindAction("Quit Game").performed += OnQuitGame;
+			}
 			transition.Play(animBranchStart);
 		}
 	}
@@ -58,7 +65,12 @@ public class LevelLoader : MonoBehaviour
 		}
 	}
 
-	public void QuitGame(InputAction.CallbackContext context)
+	public void OnQuitGame(InputAction.CallbackContext context)
+	{
+		QuitGame();
+	}
+
+	public void QuitGame()
 	{
 		Application.Quit();
 	}

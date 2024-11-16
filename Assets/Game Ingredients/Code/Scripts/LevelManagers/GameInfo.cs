@@ -75,7 +75,7 @@ public class GameInfo : MonoBehaviour
 		gameLocation = desLocation;
 		if (destination != null)
 		{
-			if (!string.IsNullOrEmpty(spawnLocation)) spawnObjName = spawnLocation;
+			spawnObjName = spawnLocation;
 			LevelLoader.instance.LoadNextLevel(destination);
 		}
 	}
