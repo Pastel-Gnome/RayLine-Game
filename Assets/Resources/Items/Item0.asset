@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Pretty Shell
   id: 0
   description: A pretty purple shell.
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 2a6c146405df9e449b2ba92ef0d56fe4, type: 3}

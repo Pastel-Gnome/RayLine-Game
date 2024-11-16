@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Piece Of Stinky Cheese
   id: 4
   description: A small piece of stinky cheese that Tony dropped. It has a hole that
-    looks very similar to the letter 'E'
-  sprite: {fileID: 0}
+    looks very similar to the letter 'E'.
+  sprite: {fileID: 21300000, guid: 7c1a31d63ee90964485f885da3152f19, type: 3}

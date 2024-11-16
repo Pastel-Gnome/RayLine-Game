@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: House Key
   id: 6
   description: A key to your house!
-  sprite: {fileID: 21300000, guid: 32755fb7bdfd98b48ab8895afeb48da3, type: 3}
+  sprite: {fileID: 21300000, guid: 213f4ed7804c9024db3abd5b3fbe7806, type: 3}

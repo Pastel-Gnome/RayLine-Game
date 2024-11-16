@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Torn Letter Piece
   id: 2
   description: A small piece of paper that used to be a part of Sally's love letter.
-    The letter 'U' is written especially thick.
-  sprite: {fileID: 0}
+    The letter 'U' is highlighted.
+  sprite: {fileID: 21300000, guid: becad8c57d8daa443b7c7c7a6af4803a, type: 3}
