@@ -39,6 +39,14 @@ public class InteractionPipeline : MonoBehaviour
 		DialogueManager.instance.StartDialogue(anomalyNode, new List<UnityEngine.Events.UnityEvent>());
 	}
 
+	public void DeleteObject(GameObject go)
+    {
+        SaveableObj saveable = go.GetComponent<SaveableObj>();
+        if (saveable != null) GameEventsManager.instance.AddDeleteable(saveable.uniqueId);
+        if (DialogueManager.inProgress) DialogueManager.instance.EndDialogue();
+        Destroy(go);
+    }
+
     public void QuitGame()
     {
         LevelLoader.instance.QuitGame();

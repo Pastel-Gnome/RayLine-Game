@@ -4,6 +4,11 @@ using UnityEngine;
 public class SaveableObj : MonoBehaviour
 {
 	public string uniqueId;
+
+	protected virtual void Start()
+	{
+		uniqueId = UniqueID.CreateID(gameObject.name, transform);
+	}
 }
 
 public static class UniqueID

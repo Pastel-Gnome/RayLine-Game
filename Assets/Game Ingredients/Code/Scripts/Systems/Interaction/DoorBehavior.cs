@@ -9,7 +9,7 @@ public class DoorBehavior : DialogueActivator
 
 	[Header("Locked Status")]
 	public bool isUnlocked = false;
-	[SerializeField] int itemToUnlock;
+	[SerializeField] int itemToUnlock = -1;
 	[SerializeField] int doorOpenIndex;
 
 	[Header("Sound")]
@@ -17,14 +17,15 @@ public class DoorBehavior : DialogueActivator
 	private AudioSource audioSource;
 
 
-	private void Start()
+	protected override void Start()
 	{
+		uniqueId = UniqueID.CreateID(destinationSceneName, transform);
 		audioSource = GetComponent<AudioSource>();
 	}
 
 	public override void Interact(Interactor interactor)
 	{
-		if (isUnlocked || InventoryTracker.instance.CheckItem(itemToUnlock))
+		if (isUnlocked || (itemToUnlock >= 0 && InventoryTracker.instance.CheckItem(itemToUnlock)))
 		{
 			audioSource.PlayOneShot(doorClips[1]);
 			dialogueEvents[doorOpenIndex].Invoke();
@@ -39,6 +40,11 @@ public class DoorBehavior : DialogueActivator
 			else
 			{
 				DialogueManager.instance.Interact();
+				if (afterEffect)
+				{
+					dialogueEvents[afterEffectIndex].Invoke();
+					afterEffect = false;
+				}
 			}
 		}
 	}

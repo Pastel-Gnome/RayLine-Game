@@ -26,6 +26,11 @@ public class NPCBehavior : DialogueActivator
 			else
 			{
 				DialogueManager.instance.Interact();
+				if (afterEffect)
+				{
+					dialogueEvents[afterEffectIndex].Invoke();
+					afterEffect = false;
+				}
 			}
 		}
 	}

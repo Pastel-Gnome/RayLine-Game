@@ -10,6 +10,7 @@ public class QuestManager : MonoBehaviour
 
 	[SerializeField] List<QuestInfoSO> questPool = new List<QuestInfoSO>();
 	[SerializeField] List<Quest> activeQuests = new List<Quest>();
+	private List<int> questIDList = new List<int>();
 
 	[SerializeField] Transform questTracker;
 	[SerializeField] List<QuestDisplay> displays = new List<QuestDisplay>();
@@ -38,12 +39,16 @@ public class QuestManager : MonoBehaviour
 		Quest newQuest = new Quest();
 		newQuest.SetUpQuest(questInfo);
 
-		if (soundPlayed) SoundManager.instance.PlayQuestSound(0);
-		QuestDisplay newDisplay = Instantiate(questDisplayPrefab, questTracker).GetComponentInChildren<QuestDisplay>();
-		newDisplay.SetupDisplay(questInfo.questName, questInfo.steps);
+		if (!questIDList.Contains(questID))
+		{
+			if (soundPlayed) SoundManager.instance.PlayQuestSound(0);
+			QuestDisplay newDisplay = Instantiate(questDisplayPrefab, questTracker).GetComponentInChildren<QuestDisplay>();
+			newDisplay.SetupDisplay(questInfo.questName, questInfo.steps);
 
-		displays.Add(newDisplay);
-		activeQuests.Add(newQuest);
+			displays.Add(newDisplay);
+			activeQuests.Add(newQuest);
+			questIDList.Add(questID);
+		}
 	}
 
 

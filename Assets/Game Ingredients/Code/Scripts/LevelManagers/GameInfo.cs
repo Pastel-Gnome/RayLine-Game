@@ -80,6 +80,11 @@ public class GameInfo : MonoBehaviour
 		}
 	}
 
+	public partOfTown CheckLocation()
+	{
+		return gameLocation;
+	}
+
 	public void RegisterQuestInput(int questID)
 	{
 		

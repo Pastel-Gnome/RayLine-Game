@@ -44,14 +44,20 @@ public class InventoryTracker : MonoBehaviour
 
 	public void AddItem(int desItem)
     {
-        items.Add(desItem);
-        OnInventoryChange.Invoke();
+		if (!items.Contains(desItem))
+		{
+			items.Add(desItem);
+			OnInventoryChange.Invoke();
+		}
     }
 
     public void RemoveItem(int desItem)
     {
-        items.Remove(desItem);
-        OnInventoryChange.Invoke();
+		if (items.Contains(desItem))
+		{
+			items.Remove(desItem);
+			OnInventoryChange.Invoke();
+		}
     }
 
 	public bool CheckItem(int desItem)

@@ -12,9 +12,10 @@ public class Anomaly : SaveableObj, IInteractable
 
 	public bool isPromptable { get; set; } = true;
 
-	private void Start()
+	protected override void Start()
 	{
-        CallAfterDelay.Create(0.1f, () => {
+		uniqueId = UniqueID.CreateID(anomalyID.ToString() + "Parent", transform);
+		CallAfterDelay.Create(0.1f, () => {
             parentAnimator = transform.parent.GetComponent<Animator>();
             parentDialogue = transform.parent.GetComponent<DialogueActivator>();
             parentAnimator.SetTrigger("Flip");

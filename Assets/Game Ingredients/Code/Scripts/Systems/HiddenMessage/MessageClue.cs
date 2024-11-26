@@ -13,7 +13,7 @@ public class MessageClue : SaveableObj, IInteractable
 
 	public bool isPromptable { get; set; } = true;
 
-	private void Start()
+	protected override void Start()
 	{
 		uniqueId = UniqueID.CreateID(anomalyID.ToString() + cluePiece, transform);
 	}

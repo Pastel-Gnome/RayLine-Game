@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 	private int diaIndex = 0;
 	private int nodeState = -1; // -1 = none started, 0 = choices available, 1 = node in progress and no choices available, 2 = node finished (and should be clicked to close dialogue)
 	private List<UnityEvent> dialogueEvents = new List<UnityEngine.Events.UnityEvent>();
+	private GameInfo.partOfTown dialogueLocation;
 
 	[Header("Images")]
 	[SerializeField] Image characterPortrait;
@@ -86,7 +87,7 @@ public class DialogueManager : MonoBehaviour
 				DialogueSegment currentSegment = currentNode.segments[diaIndex];
 				if (currentSegment.nextBranch == null)
 				{
-					EndDialogue();
+					if (dialogueLocation != GameInfo.partOfTown.Inside) EndDialogue();
 				} else
 				{
 					ChangeNode(currentSegment.nextBranch.RootNode);
@@ -105,6 +106,7 @@ public class DialogueManager : MonoBehaviour
 			inProgress = true;
 			nodeState = 0;
 			diaIndex = 0;
+			dialogueLocation = GameInfo.instance.CheckLocation();
 
 			dialogueEvents.Clear();
 			dialogueEvents = tempEvents;
