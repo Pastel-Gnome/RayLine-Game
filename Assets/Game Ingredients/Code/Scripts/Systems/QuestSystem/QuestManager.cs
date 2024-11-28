@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
@@ -15,6 +14,8 @@ public class QuestManager : MonoBehaviour
 	[SerializeField] Transform questTracker;
 	[SerializeField] List<QuestDisplay> displays = new List<QuestDisplay>();
 	[SerializeField] GameObject questDisplayPrefab;
+
+	public QuestLog questLog;
 
 	private void Start()
 	{
@@ -42,6 +43,8 @@ public class QuestManager : MonoBehaviour
 		if (!questIDList.Contains(questID))
 		{
 			if (soundPlayed) SoundManager.instance.PlayQuestSound(0);
+
+			questLog.CreateEntry(questInfo);
 			QuestDisplay newDisplay = Instantiate(questDisplayPrefab, questTracker).GetComponentInChildren<QuestDisplay>();
 			newDisplay.SetupDisplay(questInfo.questName, questInfo.steps);
 
@@ -60,7 +63,7 @@ public class QuestManager : MonoBehaviour
 		{
 			if (activeQuests[questIndex].CompleteQuestStep(stepID)) // if all steps in the quest have been completed
 			{
-				FinishQuest(questIndex);
+				FinishQuest(questID, questIndex);
 			}
 			else // if quest still has steps to complete
 			{
@@ -70,8 +73,10 @@ public class QuestManager : MonoBehaviour
 		}
 	}
 
-    public void FinishQuest(int questIndex)
+    public void FinishQuest(int questID, int questIndex)
     {
+		questLog.UpdateQuestStatus(questID, true);
+
 		Destroy(displays[questIndex].transform.parent.gameObject);
 		displays.RemoveAt(questIndex);
 		activeQuests.RemoveAt(questIndex);

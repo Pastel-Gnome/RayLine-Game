@@ -10,6 +10,7 @@ public class QuestInfoSO : ScriptableObject
 	[TextArea(minLines: 1, maxLines: 4)]
 	public string questDescription;
 	public string questGiver;
+	public Sprite giverIcon;
 
 	[Header("Quest Data")]
 	public int questID;
