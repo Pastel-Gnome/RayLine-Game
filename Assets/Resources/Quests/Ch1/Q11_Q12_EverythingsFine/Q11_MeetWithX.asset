@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
+  m_Name: Q11_MeetWithX
+  m_EditorClassIdentifier: 
+  questName: Meet With [NAME]
+  questDescription: '[NAME] said she''ll meet you outside your house in the morning
+    so you both can go talk to the Mayor about the weird object. Go out to meet her!'
+  questGiver: '[NAME]'
+  giverIcon: {fileID: 0}
+  questID: 11
+  steps:
+  - {fileID: 11400000, guid: 0036de913dd29fc4f8703ceeb5ea32c8, type: 2}

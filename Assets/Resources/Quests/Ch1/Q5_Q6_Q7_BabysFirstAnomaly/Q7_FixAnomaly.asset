@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
+  m_Name: Q7_FixAnomaly
+  m_EditorClassIdentifier: 
+  questName: Fix It?
+  questDescription: Roscoe seems concerned about this.. thing? Maybe you can make
+    it go away. It should be safe to look at it up close, right?
+  questGiver: Roscoe
+  giverIcon: {fileID: 21300000, guid: af3bd01e4d42cb94bb07b27b4a250081, type: 3}
+  questID: 7
+  steps:
+  - {fileID: 11400000, guid: 47370bf54c3206344aa9cdbd8d67f113, type: 2}
+  - {fileID: 11400000, guid: 376c6e7df046ac445b81a4a28719b550, type: 2}

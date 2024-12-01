@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
-  m_Name: Quest_3_SallysLetter
+  m_Name: Q5_MeetMayor
   m_EditorClassIdentifier: 
-  questName: Deliver Sally's Letter
-  questDescription: Sally asked you to deliver her letter to Marcelo, the stock clerk
-    at the general store. He should be working inside right now.
+  questName: Meet The Mayor
+  questDescription: Sally told you the mayor can tell you a bit more about the town
+    and your house. He can be found in the Town Hall.
   questGiver: Sally
-  questID: 3
+  giverIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+  questID: 5
   steps:
-  - {fileID: 11400000, guid: 592bb7382e728e54abd95a985bf419f8, type: 2}
-  - {fileID: 11400000, guid: 3083c7e41bad0cc4a90bfea3ac560103, type: 2}
+  - {fileID: 0}
