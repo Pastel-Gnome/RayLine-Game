@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Prototyping/OutsideAreas/BeachKeyArea.unity
     guid: 526db0f2bbd192749afd35bc63636b0d
   - enabled: 1
+    path: Assets/Scenes/BeachTutorial.unity
+    guid: b9b94e1c0cf10b0458c89be332289431
+  - enabled: 1
+    path: Assets/Scenes/BeachScene.unity
+    guid: 086e17fe1505ae5479b889fb9e4fa07b
+  - enabled: 1
+    path: Assets/Scenes/TownScene.unity
+    guid: 3c9e0ac1ffb68fa49b285c13836c144b
+  - enabled: 1
+    path: Assets/Scenes/TownMain.unity
+    guid: 844234ca49e10604ab6deb36ed9d5c01
+  - enabled: 1
     path: Assets/Scenes/Prototyping/OutsideAreas/ForestHouse.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

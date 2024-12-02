@@ -106,5 +106,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetGO: {fileID: 0}
-  speed: 0.05
   allowance: {x: 2, y: 0.5}
