@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
 	[SerializeField] TextMeshProUGUI descriptionText;
 
 	[Header("Objects & Containers")]
+	public ProgressUpdater progressUpdater;
 	private GameObject dialogueParent;
 	[SerializeField] GameObject dialogueBox;
 	[SerializeField] GameObject descriptionBox;
@@ -40,6 +41,7 @@ public class DialogueManager : MonoBehaviour
 	private int diaIndex = 0;
 	private int nodeState = -1; // -1 = none started, 0 = choices available, 1 = node in progress and no choices available, 2 = node finished (and should be clicked to close dialogue)
 	private List<UnityEvent> dialogueEvents = new List<UnityEngine.Events.UnityEvent>();
+	private int afterEffectIndex = -1;
 	private GameInfo.partOfTown dialogueLocation;
 
 	[Header("Images")]
@@ -59,6 +61,7 @@ public class DialogueManager : MonoBehaviour
 		}
 
 		SceneManager.sceneLoaded += OnSceneLoaded;
+		progressUpdater = GetComponent<ProgressUpdater>();
 		dialogueParent = transform.GetChild(0).gameObject;
 		HideDialogue();
 		nodeState = -1;
@@ -69,6 +72,7 @@ public class DialogueManager : MonoBehaviour
 		if (instance == this)
 		{
 			dialogueParent.SetActive(false);
+			progressUpdater.SetUpProgress();
 		}
 	}
 
@@ -88,7 +92,8 @@ public class DialogueManager : MonoBehaviour
 				if (currentSegment.nextBranch == null)
 				{
 					if (dialogueLocation != GameInfo.partOfTown.Inside) EndDialogue();
-				} else
+				}
+				else
 				{
 					ChangeNode(currentSegment.nextBranch.RootNode);
 				}
@@ -109,7 +114,7 @@ public class DialogueManager : MonoBehaviour
 			dialogueLocation = GameInfo.instance.CheckLocation();
 
 			dialogueEvents.Clear();
-			dialogueEvents = tempEvents;
+			dialogueEvents = new List<UnityEvent>(tempEvents);
 
 			ContinueDialogue();
 			ShowDialogue();
@@ -149,12 +154,13 @@ public class DialogueManager : MonoBehaviour
 			continueIcon.enabled = false;
 		}
 
-        InvokeDialogueEvents(currentSegment);
+		if (!currentNode.OnLastSegment(diaIndex)) InvokeDialogueEvents(currentSegment);
 		SetUpChoiceButtons(currentSegment);
 
 		if (currentNode.OnLastSegment(diaIndex) && currentSegment.choices.Count == 0)
 		{
 			//Debug.Log("On Last");
+			afterEffectIndex = currentSegment.actionIndex;
 			nodeState = 2;
 		}
 	}
@@ -164,9 +170,13 @@ public class DialogueManager : MonoBehaviour
 		if (inProgress)
 		{
 			HideDialogue();
+			TriggerAfterEffect();
 
-			inProgress = false;
-			nodeState = -1;
+			CallAfterDelay.Create(0.2f, () =>
+			{
+				inProgress = false;
+				nodeState = -1;
+			});
 
 			PlayerMovement.EnableMovement();
 		}
@@ -195,6 +205,18 @@ public class DialogueManager : MonoBehaviour
 		{
 			//Debug.Log("Activating Event " + currentSegment.actionIndex + ", " + dialogueEvents[currentSegment.actionIndex].GetPersistentMethodName(0));
 			dialogueEvents[currentSegment.actionIndex].Invoke();
+		}
+	}
+
+	private void TriggerAfterEffect()
+	{
+		if (dialogueEvents.Count > 0 && afterEffectIndex >= 0)
+		{
+			dialogueEvents[afterEffectIndex].Invoke();
+			afterEffectIndex = -1;
+		} else if (dialogueEvents.Count == 0 && afterEffectIndex >= 0)
+		{
+			Debug.LogError("Cannot Trigger After Effect");
 		}
 	}
 
@@ -241,5 +263,10 @@ public class DialogueManager : MonoBehaviour
 				}
 			}
 		});
+	}
+
+	public void ToggleInventoryMarker()
+	{
+		transform.GetChild(1).gameObject.SetActive(!transform.GetChild(1).gameObject.activeInHierarchy);
 	}
 }

@@ -16,11 +16,15 @@ public class DiaryController : MonoBehaviour
 
 	public void ShowDiary()
     {
+		PlayerMovement.DisableMovement();
+		transform.parent.GetChild(0).gameObject.SetActive(true);
 		transform.GetChild(0).gameObject.SetActive(true);
 	}
 
 	public void HideDiary()
 	{
+		PlayerMovement.EnableMovement();
+		transform.parent.GetChild(0).gameObject.SetActive(false);
 		transform.GetChild(0).gameObject.SetActive(false);
 	}
 

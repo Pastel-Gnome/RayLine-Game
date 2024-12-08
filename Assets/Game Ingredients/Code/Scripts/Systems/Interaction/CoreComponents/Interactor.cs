@@ -53,7 +53,7 @@ public class Interactor : MonoBehaviour
 		{
 			if (interactable != null)
 			{
-				if (context.started) 
+				if (context.started && !DialogueManager.inProgress) 
 				{
 					interactable.Interact(this);
 				}

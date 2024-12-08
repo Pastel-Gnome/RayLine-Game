@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NPCBehavior : DialogueActivator
 {
-	[SerializeField] protected bool canTalk;
+	[SerializeField] protected bool isOnMainDia;
 	[SerializeField] protected bool dialogueLoops = true;
 
 	[SerializeField] protected Dialogue dialogue;
@@ -13,25 +13,31 @@ public class NPCBehavior : DialogueActivator
         {
 			if (!DialogueManager.inProgress)
 			{
-				if (canTalk)
+				if (isOnMainDia)
 				{
 					DialogueManager.instance.StartDialogue(dialogue.RootNode, dialogueEvents);
-					canTalk = dialogueLoops;
+					isOnMainDia = dialogueLoops;
 				}
 				else
 				{
 					DialogueManager.instance.StartDialogue(description.RootNode, dialogueEvents);
 				}
 			}
-			else
-			{
-				DialogueManager.instance.Interact();
-				if (afterEffect)
-				{
-					dialogueEvents[afterEffectIndex].Invoke();
-					afterEffect = false;
-				}
-			}
 		}
+	}
+
+	public virtual void UpdateDialogue(Dialogue newDialogue)
+	{
+		dialogue = newDialogue;
+	}
+
+	public virtual void SetMainDiaActive(bool newState)
+	{
+		isOnMainDia = newState;
+	}
+
+	public virtual void SetDiaLoop(bool newState)
+	{
+		dialogueLoops = newState;
 	}
 }

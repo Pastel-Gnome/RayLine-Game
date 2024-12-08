@@ -90,11 +90,15 @@ public class InventoryTracker : MonoBehaviour
 
 	public void ShowInventory()
     {
-        transform.GetChild(0).gameObject.SetActive(true);
+		PlayerMovement.DisableMovement();
+		transform.parent.GetChild(0).gameObject.SetActive(true);
+		transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void HideInventory()
     {
+		PlayerMovement.EnableMovement();
+		transform.parent.GetChild(0).gameObject.SetActive(false);
 		transform.GetChild(0).gameObject.SetActive(false);
 		ClearItemInfo();
 	}

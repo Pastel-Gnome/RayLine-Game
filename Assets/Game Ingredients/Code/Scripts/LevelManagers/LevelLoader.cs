@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,12 @@ public class LevelLoader : MonoBehaviour
 	public Animator transition;
 	//public Animator countdown;
 	public string animBranchStart = "ScreenSwipe_StartLevel";
+	public string animBranchEnd = "ScreenSwipe_EndLevel";
+	public string fadeBranchStart = "Crossfade_StartLevel";
 	public float transitionTime = 1f;
+
+	public UnityEvent midTransition = new UnityEvent();
+	public UnityEvent endTransition = new UnityEvent();
 
 	private void Start()
 	{
@@ -52,7 +58,14 @@ public class LevelLoader : MonoBehaviour
 	private IEnumerator LoadLevelWithTransition(string desScene)
 	{
 		PlayerMovement.DisableMovement();
-		transition.SetTrigger("StartPlaying");
+		if (transition.GetCurrentAnimatorStateInfo(0).IsName(animBranchStart))
+		{
+			transition.SetTrigger("StartPlaying");
+		} else
+		{
+			transition.Play(animBranchEnd);
+		}
+		
 
 		yield return new WaitForSeconds(transitionTime);
 		DialogueManager.instance.EndDialogue();
@@ -63,6 +76,17 @@ public class LevelLoader : MonoBehaviour
 		{
 			transition.SetTrigger("Loading");
 		}
+	}
+
+	public IEnumerator FadeOutTransition()
+	{
+		// play fade out transition
+		transition.Play(fadeBranchStart);
+		yield return new WaitForSeconds(transitionTime);
+		midTransition.Invoke();
+		transition.SetTrigger("StartPlaying");
+		yield return new WaitForSeconds(transitionTime);
+		endTransition.Invoke();
 	}
 
 	public void OnQuitGame(InputAction.CallbackContext context)

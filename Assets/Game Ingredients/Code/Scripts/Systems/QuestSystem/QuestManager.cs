@@ -17,6 +17,8 @@ public class QuestManager : MonoBehaviour
 
 	public QuestLog questLog;
 
+	private DialogueActivator playerDiaActivator;
+
 	private void Start()
 	{
 		if (instance == null)
@@ -30,33 +32,65 @@ public class QuestManager : MonoBehaviour
 
 		if (instance == this)
 		{
-			StartQuest(100, false);
+			playerDiaActivator = transform.GetComponent<DialogueActivator>();
+			CallAfterDelay.Create(0.1f, () => { playerDiaActivator.Interact(null); });
 		}
 	}
 
-	public void StartQuest(int questID, bool soundPlayed = true)
+	public void StartQuest(string combinedValues)
 	{
-		var questInfo = questPool.First(q => q.questID  == questID);
-		Quest newQuest = new Quest();
-		newQuest.SetUpQuest(questInfo);
+		int questID;
+		bool soundPlayed = false;
 
-		if (!questIDList.Contains(questID))
+		if (combinedValues.Contains(","))
 		{
-			if (soundPlayed) SoundManager.instance.PlayQuestSound(0);
+			string[] splitIDs = combinedValues.Split(',');
+			questID = int.Parse(splitIDs[0]);
+			soundPlayed = int.Parse(splitIDs[1]) == 1;
+		}
+		else
+		{
+			questID = int.Parse(combinedValues);
+		}
 
-			questLog.CreateEntry(questInfo);
-			QuestDisplay newDisplay = Instantiate(questDisplayPrefab, questTracker).GetComponentInChildren<QuestDisplay>();
-			newDisplay.SetupDisplay(questInfo.questName, questInfo.steps);
+		var questInfo = questPool.FirstOrDefault(q => q.questID  == questID);
+		if (questInfo != null)
+		{
+			Quest newQuest = new Quest();
+			newQuest.SetUpQuest(questInfo);
 
-			displays.Add(newDisplay);
-			activeQuests.Add(newQuest);
-			questIDList.Add(questID);
+			if (!questIDList.Contains(questID))
+			{
+				if (soundPlayed) SoundManager.instance.PlayQuestSound(0);
+
+				questLog.CreateEntry(questInfo);
+				QuestDisplay newDisplay = Instantiate(questDisplayPrefab, questTracker).GetComponentInChildren<QuestDisplay>();
+				newDisplay.SetupDisplay(questInfo.questName, questInfo.steps);
+
+				displays.Add(newDisplay);
+				activeQuests.Add(newQuest);
+				questIDList.Add(questID);
+			}
 		}
 	}
 
 
-    public void AdvanceQuest(int questID, int stepID)
+    public void AdvanceQuest(string combinedQuestIDs)
     {
+		int questID, stepID;
+
+		if (combinedQuestIDs.Contains(","))
+		{
+			string[] splitIDs = combinedQuestIDs.Split(',');
+			questID = int.Parse(splitIDs[0]);
+			stepID = int.Parse(splitIDs[1]);
+		}
+		else
+		{
+			questID = int.Parse(combinedQuestIDs);
+			stepID = 0;
+		}
+
 		int questIndex = activeQuests.FindIndex(q => q.questInfo.questID == questID);
 
 		if (questIndex != -1)
@@ -77,8 +111,20 @@ public class QuestManager : MonoBehaviour
     {
 		questLog.UpdateQuestStatus(questID, true);
 
-		Destroy(displays[questIndex].transform.parent.gameObject);
+		Destroy(displays[questIndex].transform.parent.parent.gameObject);
 		displays.RemoveAt(questIndex);
+
+		Dialogue dialogue = activeQuests[questIndex].questInfo.postQuestDialogue;
+		if (dialogue != null)
+		{
+			CallAfterDelay.Create(0.4f, () =>
+			{
+				playerDiaActivator.UpdateDescription(dialogue);
+				playerDiaActivator.Interact(null);
+			});
+			
+		}
+
 		activeQuests.RemoveAt(questIndex);
 		SoundManager.instance.PlayQuestSound(2);
 	}

@@ -42,8 +42,8 @@ public class HiddenMessageManager : MonoBehaviour
 		if (instance == this)
 		{
 			hiddenMessageParent = transform.GetChild(0).gameObject;
-			inputWindow = hiddenMessageParent.transform.GetChild(1).gameObject;
-			clueWindow = hiddenMessageParent.transform.GetChild(2).gameObject;
+			inputWindow = hiddenMessageParent.transform.GetChild(0).gameObject;
+			clueWindow = hiddenMessageParent.transform.GetChild(1).gameObject;
 
 			letterButtonContainer = inputWindow.transform.GetChild(0).GetChild(0);
 			letterInputContainer = inputWindow.transform.GetChild(0).GetChild(1);
@@ -155,6 +155,7 @@ public class HiddenMessageManager : MonoBehaviour
 	public void OpenInputWindow()
 	{
 		PlayerMovement.DisableMovement();
+		transform.parent.GetChild(0).gameObject.SetActive(true);
 		hiddenMessageParent.SetActive(true);
 		inputWindow.SetActive(true);
 	}
@@ -170,6 +171,7 @@ public class HiddenMessageManager : MonoBehaviour
 	public void CloseInputWindow()
     {
 		PlayerMovement.EnableMovement();
+		transform.parent.GetChild(0).gameObject.SetActive(false);
 		hiddenMessageParent.SetActive(false);
 		inputWindow.SetActive(false);
 		ClearInputLetters();
