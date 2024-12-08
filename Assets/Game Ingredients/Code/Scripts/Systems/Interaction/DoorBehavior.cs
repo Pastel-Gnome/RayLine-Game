@@ -37,15 +37,6 @@ public class DoorBehavior : DialogueActivator
 				audioSource.PlayOneShot(doorClips[0]);
 				DialogueManager.instance.StartDialogue(description.RootNode, dialogueEvents);
 			}
-			else
-			{
-				DialogueManager.instance.Interact();
-				if (afterEffect)
-				{
-					dialogueEvents[afterEffectIndex].Invoke();
-					afterEffect = false;
-				}
-			}
 		}
 	}
 }

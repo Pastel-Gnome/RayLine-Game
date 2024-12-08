@@ -9,7 +9,6 @@ public class DialogueActivator : SaveableObj, IInteractable
 	[SerializeField] protected Dialogue description;
 
 	public bool interactable = true;
-	[SerializeField] protected int afterEffectIndex = -1;
 	protected bool afterEffect = false;
 
 	public bool isPromptable => interactable;
@@ -22,25 +21,28 @@ public class DialogueActivator : SaveableObj, IInteractable
 			{
 				DialogueManager.instance.StartDialogue(description.RootNode, dialogueEvents);
 			}
-			else
-			{
-				DialogueManager.instance.Interact();
-				if (afterEffect && afterEffectIndex >= 0)
-				{
-					dialogueEvents[afterEffectIndex].Invoke();
-					afterEffect = false;
-				}
-			}
 		}
 	}
 
-	public virtual void TriggerAfterEffect()
+	public void TriggerEvent(int eventIndex)
 	{
-		afterEffect = true;
+		if (dialogueEvents.Count > 0 && eventIndex >= 0)
+		{
+			dialogueEvents[eventIndex].Invoke();
+		}
+		else if (dialogueEvents.Count == 0 && eventIndex >= 0)
+		{
+			Debug.LogError("Cannot Trigger Event");
+		}
 	}
 
-	public virtual void SetNonInteractive()
+	public virtual void UpdateDescription(Dialogue newDescription)
 	{
-		interactable = false;
+		description = newDescription;
+	}
+
+	public virtual void SetInteractable(bool newState)
+	{
+		interactable = newState;
 	}
 }

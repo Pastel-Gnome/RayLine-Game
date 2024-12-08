@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InteractionPipeline : MonoBehaviour
 {
@@ -8,28 +9,21 @@ public class InteractionPipeline : MonoBehaviour
         InventoryTracker.instance.AddItem(desItem);
     }
 
+	public void RemoveItem(int desItem)
+	{
+		InventoryTracker.instance.RemoveItem(desItem);
+	}
 
-	public void AddQuest(int questID)
+
+	public void AddQuest(string combinedValues)
     {
-        QuestManager.instance.StartQuest(questID);
+		// questID, playsSound?
+        QuestManager.instance.StartQuest(combinedValues);
     }
 
     public void RegisterQuestInput(string combinedQuestIDs)
     {
-        int questID, stepID;
-
-		if (combinedQuestIDs.Contains(","))
-        {
-			string[] splitIDs = combinedQuestIDs.Split(',');
-			questID = int.Parse(splitIDs[0]);
-			stepID = int.Parse(splitIDs[1]);
-		} else
-        {
-            questID = int.Parse(combinedQuestIDs);
-            stepID = 0;
-        }
-
-        QuestManager.instance.AdvanceQuest(questID, stepID);
+        QuestManager.instance.AdvanceQuest(combinedQuestIDs);
     }
 
 	public void FixAnomalyDialogue(string anomalyType)
@@ -43,7 +37,6 @@ public class InteractionPipeline : MonoBehaviour
     {
         SaveableObj saveable = go.GetComponent<SaveableObj>();
         if (saveable != null) GameEventsManager.instance.AddDeleteable(saveable.uniqueId);
-        if (DialogueManager.inProgress) DialogueManager.instance.EndDialogue();
         Destroy(go);
     }
 
@@ -51,4 +44,32 @@ public class InteractionPipeline : MonoBehaviour
     {
         LevelLoader.instance.QuitGame();
     }
+
+	public void OnDialogueInteract(InputAction.CallbackContext context)
+	{
+        if (context.started && DialogueManager.inProgress)
+        {
+            DialogueManager.instance.Interact();
+        }
+	}
+
+	public void SetProgressID(string newID)
+	{
+		DialogueManager.instance.progressUpdater.SetProgressID(newID);
+	}
+
+	public void SetProgressDesc(Dialogue newDesc)
+	{
+		DialogueManager.instance.progressUpdater.SetProgressDesc(newDesc);
+	}
+
+	public void SetProgressDia(Dialogue newDia)
+	{
+		DialogueManager.instance.progressUpdater.SetProgressDia(newDia);
+	}
+
+	public void AddProgress()
+	{
+		DialogueManager.instance.progressUpdater.AddProgress();
+	}
 }

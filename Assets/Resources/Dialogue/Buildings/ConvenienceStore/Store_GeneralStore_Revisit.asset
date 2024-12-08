@@ -16,8 +16,9 @@ MonoBehaviour:
     choiceText: 
     segments:
     - speakerName: 
-      dialogueText: 
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      dialogueText: You can talk to Marcelo again or exit the general store.
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
       actionIndex: -99
       choices:

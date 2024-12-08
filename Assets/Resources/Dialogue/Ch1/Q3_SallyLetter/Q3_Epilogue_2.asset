@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Q3_Epilogue_2
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: 
+    segments:
+    - speakerName: Buddy
+      dialogueText: Huh? Hey, look! She dropped something!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Buddy
+      dialogueText: It looks like it's a torn piece of that letter she wrote!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 9
+      choices: []
+    - speakerName: Dot
+      dialogueText: Maybe I should keep this for now, just in case.
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Buddy
+      dialogueText: Who knows, it might come in handy!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Buddy
+      dialogueText: "Now, chin up, pal! Let\u2019s go see the mayor!"
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 10
+      choices: []

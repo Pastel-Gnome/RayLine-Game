@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Store_GeneralStore_LetterRecent
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: 
+    segments:
+    - speakerName: 
+      dialogueText: You step into the general store. You're greeted by a row of stalls
+        filled with countless bits and bobs.
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices:
+      - {fileID: 11400000, guid: cbfda840081a1d7449a6cc1f36aa1cac, type: 2}
+      - {fileID: 11400000, guid: adf2f3ea47a192648b0fcabbd431da38, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Q1_PostQuest
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: 
+    segments:
+    - speakerName: Otto
+      dialogueText: Stop yer lingerin'! Go on, get!
+      speakerIcon: {fileID: 21300000, guid: 04769e727e7750d4abe41b8a727b2b2e, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 32b5f54b1590bbc4cb21ad8e9c31d107, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []

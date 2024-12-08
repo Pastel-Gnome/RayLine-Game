@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
+  m_Name: Q4_ReturnToSally
+  m_EditorClassIdentifier: 
+  questName: Give Sally The News
+  questDescription: Marcelo has.. indicated that he can't accept the letter. Perhaps
+    it's time to return to Sally.
+  questGiver: Sally
+  giverIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+  questID: 4
+  steps:
+  - {fileID: 11400000, guid: 3083c7e41bad0cc4a90bfea3ac560103, type: 2}

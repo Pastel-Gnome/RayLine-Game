@@ -1,30 +1,26 @@
 using System.Collections.Generic;
-using System.Text;
 using TMPro;
 using UnityEngine;
 
 public class QuestDisplay : MonoBehaviour
 {
-    private bool stepsShowing = true;
-    public void ToggleQuestSteps()
-    {
-        stepsShowing = !stepsShowing;
-        for (int i = 1; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).gameObject.SetActive(stepsShowing);
-        }
-    }
 
     public void SetupDisplay(string questName, List<QuestStep> questSteps)
     {
+        Transform closedVersion = transform.parent.parent.GetChild(1).GetChild(0);
         transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = questName;
-        TextMeshProUGUI firstStep = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+
+		TextMeshProUGUI firstStep = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
 		firstStep.text = questSteps[0].stepName + " -";
-        if (questSteps.Count > 1 )
+
+		if (questSteps.Count > 1)
         {
             for (int i = 1; i < questSteps.Count; i++)
             {
-				Instantiate(firstStep.gameObject, transform).GetComponent<TextMeshProUGUI>().text = questSteps[i].stepName + " -";
+                GameObject newStep = Instantiate(firstStep.gameObject, transform);
+                newStep.GetComponent<TextMeshProUGUI>().text = questSteps[i].stepName + " -";
+
+                Instantiate(closedVersion.GetChild(1), closedVersion);
 			}
         }
     }

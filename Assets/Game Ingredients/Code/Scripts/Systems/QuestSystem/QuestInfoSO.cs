@@ -15,4 +15,5 @@ public class QuestInfoSO : ScriptableObject
 	[Header("Quest Data")]
 	public int questID;
 	public List<QuestStep> steps;
+	public Dialogue postQuestDialogue;
 }
