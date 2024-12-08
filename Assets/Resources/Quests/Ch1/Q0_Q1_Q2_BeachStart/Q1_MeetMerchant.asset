@@ -16,7 +16,8 @@ MonoBehaviour:
   questDescription: Buddy says there's a fishing merchant further down the beach.
     Maybe they have some insights to share about this town.
   questGiver: Buddy
-  giverIcon: {fileID: 21300000, guid: 90ffbd679f4b9564e9329176829d83f0, type: 3}
+  giverIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
   questID: 1
   steps:
   - {fileID: 11400000, guid: 8b58a0c10890a3f40835968b84af7496, type: 2}
+  postQuestDialogue: {fileID: 0}

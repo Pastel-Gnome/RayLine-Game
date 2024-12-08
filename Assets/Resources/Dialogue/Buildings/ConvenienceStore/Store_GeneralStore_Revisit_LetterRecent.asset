@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
-  m_Name: Store_GeneralStore_Revisit
+  m_Name: Store_GeneralStore_Revisit_LetterRecent
   m_EditorClassIdentifier: 
   RootNode:
     choiceText: 
@@ -23,4 +23,4 @@ MonoBehaviour:
       actionIndex: -99
       choices:
       - {fileID: 11400000, guid: cbfda840081a1d7449a6cc1f36aa1cac, type: 2}
-      - {fileID: 11400000, guid: 7b992b4ffc74b624e8db1c2924820f7a, type: 2}
+      - {fileID: 11400000, guid: adf2f3ea47a192648b0fcabbd431da38, type: 2}

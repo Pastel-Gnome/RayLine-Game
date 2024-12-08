@@ -10,17 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
-  m_Name: Store_GeneralStore_Revisit
+  m_Name: Store_NotGivenLetter
   m_EditorClassIdentifier: 
   RootNode:
     choiceText: 
     segments:
     - speakerName: 
-      dialogueText: You can talk to Marcelo again or exit the general store.
+      dialogueText: You step into the general store. You're greeted by a row of stalls
+        filled with countless bits and bobs.
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: 
+      dialogueText: You see a person with a fish bowl for a head stocking the shelves.
       speakerIcon: {fileID: 0}
       speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
       actionIndex: -99
       choices:
       - {fileID: 11400000, guid: cbfda840081a1d7449a6cc1f36aa1cac, type: 2}
-      - {fileID: 11400000, guid: 7b992b4ffc74b624e8db1c2924820f7a, type: 2}
+      - {fileID: 11400000, guid: b9baff3ed974ed047bb03e8e247a9245, type: 2}

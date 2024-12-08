@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Q1_Otto_FirstMeet
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: 
+    segments:
+    - speakerName: Dot
+      dialogueText: Umm.. E-excuse me!
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 0
+      choices: []
+    - speakerName: Otto
+      dialogueText: G-uh! Argh! Blimey, you scared off all me fish!
+      speakerIcon: {fileID: 21300000, guid: 04769e727e7750d4abe41b8a727b2b2e, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 32b5f54b1590bbc4cb21ad8e9c31d107, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: "<i>Oops.. he\u2019s already mad at me.. Okay-okay, maybe I should
+        try blending in...</i>"
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: "Ah.. A-argh! How do ye fare, matey!? I\u2019ve washed ashore
+        from a long voyage and- and I seek the lay of the land!"
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Otto
+      dialogueText: ...
+      speakerIcon: {fileID: 21300000, guid: 04769e727e7750d4abe41b8a727b2b2e, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 32b5f54b1590bbc4cb21ad8e9c31d107, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: ...
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Otto
+      dialogueText: "Follow the bloody path, landlubber! Town\u2019s that-a-way!
+        Now shoo, shoo! You\u2019re scaring me fishies!"
+      speakerIcon: {fileID: 21300000, guid: 04769e727e7750d4abe41b8a727b2b2e, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 32b5f54b1590bbc4cb21ad8e9c31d107, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: "Oh- okay, thanks! My name\u2019s Dot, by the way."
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Otto
+      dialogueText: "Argh, name\u2019s Otto! CAPTAIN Otto to you! Pleasure to meet
+        ye, young Dot! Now go, go! Fish. Otto wants FISH!"
+      speakerIcon: {fileID: 21300000, guid: 04769e727e7750d4abe41b8a727b2b2e, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 32b5f54b1590bbc4cb21ad8e9c31d107, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: Aye, aye, Captain Otto!
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 1
+      choices: []

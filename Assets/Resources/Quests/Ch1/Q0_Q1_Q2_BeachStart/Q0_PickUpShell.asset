@@ -16,8 +16,8 @@ MonoBehaviour:
   questDescription: What a pretty shell! Buddy would like you to pick up the shell
     and take a look at it.
   questGiver: Buddy
-  giverIcon: {fileID: 21300000, guid: 90ffbd679f4b9564e9329176829d83f0, type: 3}
+  giverIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
   questID: 0
   steps:
   - {fileID: 11400000, guid: d51d970974c471b48a417efe08f8d38f, type: 2}
-  - {fileID: 11400000, guid: 986137ee3bc17c245af198383704cb29, type: 2}
+  postQuestDialogue: {fileID: 11400000, guid: 7f7d35d390f724d45a45e73a052e58b8, type: 2}

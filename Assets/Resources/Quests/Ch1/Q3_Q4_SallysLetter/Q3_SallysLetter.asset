@@ -20,4 +20,4 @@ MonoBehaviour:
   questID: 3
   steps:
   - {fileID: 11400000, guid: 592bb7382e728e54abd95a985bf419f8, type: 2}
-  - {fileID: 11400000, guid: 3083c7e41bad0cc4a90bfea3ac560103, type: 2}
+  postQuestDialogue: {fileID: 0}
