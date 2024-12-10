@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3230623174150679492}
   - component: {fileID: 6825807648249301198}
   - component: {fileID: 3786537952001530410}
-  - component: {fileID: 1926606603031206110}
   - component: {fileID: 2603757082792459937}
   m_Layer: 0
   m_Name: InsideManager
@@ -97,9 +96,9 @@ MonoBehaviour:
     m_ActionName: Game/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1926606603031206110}
-        m_TargetAssemblyTypeName: InsideInteractor, Assembly-CSharp
-        m_MethodName: OnInteract
+      - m_Target: {fileID: 2603757082792459937}
+        m_TargetAssemblyTypeName: InteractionPipeline, Assembly-CSharp
+        m_MethodName: OnDialogueInteract
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -135,18 +134,6 @@ MonoBehaviour:
   destinationScene: TownArea
   spawnLocation: Door_GeneralStore
   locationID: 2
---- !u!114 &1926606603031206110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4850071293623872117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7696cc807afe25b458c4cac6200ed2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2603757082792459937
 MonoBehaviour:
   m_ObjectHideFlags: 0

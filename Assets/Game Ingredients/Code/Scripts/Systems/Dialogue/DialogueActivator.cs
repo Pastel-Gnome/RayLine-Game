@@ -13,7 +13,7 @@ public class DialogueActivator : SaveableObj, IInteractable
 
 	public bool isPromptable => interactable;
 
-	public virtual void Interact(Interactor interactor)
+	public virtual void Interact()
 	{
 		if (isPromptable)
 		{

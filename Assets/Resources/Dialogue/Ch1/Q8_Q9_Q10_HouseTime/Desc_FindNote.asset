@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Desc_FindNote
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: Yes.
+    segments:
+    - speakerName: Dot
+      dialogueText: This looks like a note!
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: "\"To my dear ol\u2019 <color=\"red\"><b>S</b></color>ally...\""
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: "\"I know things have been tough on ya ever since yer Ma and
+        Pa sailed past the shores, and your uncle sure wasn\u2019t the best feller
+        to take care of a young\u2019n since he was too busy mayor-ing and whatnot.\""
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: '"I remember how little you were when I took ya in - gave you
+        food and a warm hearth - and I tried my best to raise you."'
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: "\"Well, you turned out to be a wonderful lil\u2019 critter,
+        better than butter and sweeter than jam. I\u2019m proud of the person you\u2019re
+        becoming, and I wanna make sure yer provided for!\""
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: "\"I\u2019m gettin\u2019 along in years, so I think it\u2019s
+        high time I hang up the workin\u2019 boots and find a place to contemplate
+        life..\""
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: "\"--Now I ain\u2019t kickin\u2019 the bucket! I\u2019m too young
+        for that! I\u2019ll be spendin\u2019 my days sailin' the high seas and fishin\u2019
+        day n\u2019 night.\""
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: "\"That means my cozy cot will be standin\u2019 empty and lonely.
+        I know you already have a place to stay, but should you ever need another
+        bunk or room for a friend, my home is always there for ya.\""
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: "\"Make sure you keep the key! It\u2019s got a special engraving
+        for a special home. I\u2019ll be gettin\u2019 along now, but we\u2019ll see
+        each other again soon, cupcake!\""
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: '"From, Grandpa..."'
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: "\"P.S. - Don\u2019t be afraid to tell that Marcelo guy what
+        you\u2019re feelin\u2019. He may put on a tough-guy attitude, but he\u2019s
+        all heart inside!\u201D"
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: Dot
+      dialogueText: Wow.. what a heartfelt message. It had a highlighted letter on
+        it... i wonder if that's part of the code for the combo lock?
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 0
+      choices: []

@@ -4,8 +4,27 @@ using UnityEngine;
 public class SaveableObj : MonoBehaviour
 {
 	public string uniqueId;
+	public bool deactivateOnStart = false;
 
 	protected virtual void Start()
+	{
+		IDPlease();
+		if (deactivateOnStart && (GameInfo.instance.cheeseList[0] != 1))
+		{
+			gameObject.SetActive(false);
+		} else if (deactivateOnStart)
+		{
+			CallAfterDelay.Create(0.1f, () =>
+			{
+				if (deactivateOnStart)
+				{
+					gameObject.SetActive(false);
+				}
+			}).transform.SetParent(transform);
+		}
+	}
+
+	public virtual void IDPlease()
 	{
 		uniqueId = UniqueID.CreateID(gameObject.name, transform);
 	}

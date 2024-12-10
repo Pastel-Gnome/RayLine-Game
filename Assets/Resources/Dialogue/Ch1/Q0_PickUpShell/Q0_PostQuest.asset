@@ -32,8 +32,8 @@ MonoBehaviour:
       actionIndex: 0
       choices: []
     - speakerName: Buddy
-      dialogueText: "Huh?! What\u2019s that? Did you hear that? It\u2019s coming
-        from over there, on the left!"
+      dialogueText: "Now let\u2019s continue on! It looks like there\u2019s a pathway
+        to the left!"
       speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
       speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
       nextBranch: {fileID: 0}

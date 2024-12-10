@@ -1325,8 +1325,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f7b4e45db66ca2c42b2e6589976ad557, type: 2}
+  m_sharedMaterial: {fileID: -3373805952480662986, guid: f7b4e45db66ca2c42b2e6589976ad557, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01960efca01f50429f3eb9b9991be82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationSceneName: BeachKeyArea
+  destinationSceneName: BeachTutorial
   locationID: 0
 --- !u!1 &1252145408
 GameObject:
@@ -1726,6 +1726,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4245252884533114035, guid: cecfeb8e298084440b40f979c8c83936, type: 3}
   m_PrefabInstance: {fileID: 165554260}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1343342284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2079959579316525126, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
+  m_PrefabInstance: {fileID: 1999387691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e421b02f74222244185d6f697287bb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1488318253
 GameObject:
   m_ObjectHideFlags: 0
@@ -16451,8 +16462,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f7b4e45db66ca2c42b2e6589976ad557, type: 2}
+  m_sharedMaterial: {fileID: -3373805952480662986, guid: f7b4e45db66ca2c42b2e6589976ad557, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17371,6 +17382,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4053513211329733087, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1343342284}
     - target: {fileID: 4248057284299519753, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17803,6 +17818,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7398383791763923657, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
+      propertyPath: dialogueEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8035963929614158099, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -18077,8 +18096,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Other Shores
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f7b4e45db66ca2c42b2e6589976ad557, type: 2}
+  m_sharedMaterial: {fileID: -3373805952480662986, guid: f7b4e45db66ca2c42b2e6589976ad557, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

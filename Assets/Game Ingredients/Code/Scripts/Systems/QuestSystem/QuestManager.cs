@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuestManager : MonoBehaviour
 {
@@ -32,8 +33,17 @@ public class QuestManager : MonoBehaviour
 
 		if (instance == this)
 		{
+			SceneManager.sceneLoaded += OnSceneLoaded;
 			playerDiaActivator = transform.GetComponent<DialogueActivator>();
-			CallAfterDelay.Create(0.1f, () => { playerDiaActivator.Interact(null); });
+		}
+	}
+
+	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+	{
+		if (instance == this && scene.name == "BeachTutorial")
+		{
+			CallAfterDelay.Create(0.1f, () => { playerDiaActivator.Interact(); });
+			SceneManager.sceneLoaded -= OnSceneLoaded;
 		}
 	}
 
@@ -117,10 +127,10 @@ public class QuestManager : MonoBehaviour
 		Dialogue dialogue = activeQuests[questIndex].questInfo.postQuestDialogue;
 		if (dialogue != null)
 		{
-			CallAfterDelay.Create(0.4f, () =>
+			CallAfterDelay.Create(0.25f, () =>
 			{
 				playerDiaActivator.UpdateDescription(dialogue);
-				playerDiaActivator.Interact(null);
+				playerDiaActivator.Interact();
 			});
 			
 		}

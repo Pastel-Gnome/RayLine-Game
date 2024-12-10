@@ -27,39 +27,37 @@ public class MapUpdater : MonoBehaviour
 		UpdateMapLocation();
 	}
 
-	private void UpdateMapLocation()
+	public void UpdateMapLocation()
 	{
 		GameInfo.partOfTown gameLocation = GameInfo.instance.CheckLocation();
 		int locationIndex = (int)mapLocation.StartingBeach;
 
-		if (gameLocation == GameInfo.partOfTown.Beach)
-		{
-			// if the scene is a beach but not the starting area, it is the fishing shack area
-			// otherwise default to the starting area
-			if (!SceneManager.GetActiveScene().name.Equals("BeachKeyArea"))
-			{
-				locationIndex = (int)mapLocation.FishingShack;
-			}
-		}
-		else if (gameLocation == GameInfo.partOfTown.Town)
-		{
-			// if the scene is a part of town that contains the general store, it is the general store area
-			// otherwise default to the town hall
-			if (SceneManager.GetActiveScene().name.Equals("TownArea"))
-			{
-				locationIndex = (int)mapLocation.GeneralStore;
-			} else
-			{
-				locationIndex = (int)mapLocation.TownHall;
-			}
-		}
-		else if (gameLocation == GameInfo.partOfTown.Forest)
+		if (SceneManager.GetActiveScene().name.Equals("TownScene"))
 		{
 			// currently the only forest area is the player's house
 			locationIndex = (int)mapLocation.PlayerHouse;
+		} else if (gameLocation == GameInfo.partOfTown.Beach)
+		{
+			// if the scene is a beach but not the starting area, it is the fishing shack area
+			// otherwise default to the starting area
+			if (SceneManager.GetActiveScene().name.Equals("BeachScene"))
+			{
+				locationIndex = (int)mapLocation.FishingShack;
+			}
+		} else if (SceneManager.GetActiveScene().name.Equals("TownMain"))
+		{
+			locationIndex = (int)mapLocation.TownSide;
 		}
 
-		playerIcon.position = mapLocationParent.GetChild(locationIndex).position;
+		if (playerIcon != null && mapLocationParent != null)
+		{
+			playerIcon.position = mapLocationParent.GetChild(locationIndex).position;
+		}else
+		{
+			playerIcon = mapContents.GetChild(0).GetChild(0);
+			mapLocationParent = mapContents.GetChild(0).GetChild(1);
+			playerIcon.position = mapLocationParent.GetChild(locationIndex).position;
+		}
 	}
 
 	public enum mapLocation
@@ -68,7 +66,8 @@ public class MapUpdater : MonoBehaviour
 		FishingShack = 1,
 		GeneralStore = 2,
 		TownHall = 3,
-		PlayerHouse = 4
+		TownSide = 4,
+		PlayerHouse = 5
 	}
 
 }

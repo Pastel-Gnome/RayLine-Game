@@ -16,9 +16,17 @@ MonoBehaviour:
     choiceText: 
     segments:
     - speakerName: 
-      dialogueText: You step into the general store. You're greeted by a row of stalls
-        filled with countless bits and bobs.
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      dialogueText: You step into the general store.
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: 
+      dialogueText: You're greeted by rows of shelves filled with countless bits
+        and bobs.
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
       actionIndex: -99
       choices:

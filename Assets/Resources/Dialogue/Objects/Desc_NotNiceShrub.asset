@@ -16,19 +16,17 @@ MonoBehaviour:
     choiceText: Look at shrub.
     segments:
     - speakerName: 
-      dialogueText: This is not a nice shrub.
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      dialogueText: It looks like there's something inside the bush...
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices: []
     - speakerName: 
-      dialogueText: Very pokey.
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      dialogueText: Your hand moves on its own and reaches out to the object.
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
-      choices: []
-    - speakerName: 
-      dialogueText: And it smells like cleaner. Nasty.
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
-      nextBranch: {fileID: 0}
+      actionIndex: -99
       choices:
       - {fileID: 11400000, guid: 076aa2690be961541b6d348d19fc3496, type: 2}
-      - {fileID: 11400000, guid: c4840ee32b92f0147a9bf029b516d6eb, type: 2}

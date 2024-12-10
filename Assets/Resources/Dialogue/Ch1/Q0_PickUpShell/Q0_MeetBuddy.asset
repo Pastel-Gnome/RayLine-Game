@@ -15,72 +15,140 @@ MonoBehaviour:
   RootNode:
     choiceText: 
     segments:
+    - speakerName: Dot
+      dialogueText: What a beautiful place!
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: The brisk ocean air... The sand on my feet...
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: The silly octopus flying around... wait, the what?
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
     - speakerName: ???
-      dialogueText: Hi! Hi! Hello! Hello! Hi! Hello! I followed you here!
+      dialogueText: Hi! Hi! Hello! Hello! Hi! Hello!
       speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
       speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
     - speakerName: Dot
-      dialogueText: Y-you followed me here..? Who are you?! What even is this place??
+      dialogueText: Who are you?!
       speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
       speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
     - speakerName: Buddy
-      dialogueText: "Beats me! You looked lost so I wanted to help! I\u2019m Buddy!
-        What\u2019s your name?"
+      dialogueText: "I\u2019m Buddy! You looked lost so I wanted to help! What\u2019s
+        your name?"
       speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
       speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
     - speakerName: Dot
-      dialogueText: "Nice to meet you, Buddy! So\u2026 what exactly.. are you??"
+      dialogueText: Huh... well... my name is Dot!
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: "If you don\u2019t mind me asking... what exactly are you?"
       speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
       speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
     - speakerName: Buddy
-      dialogueText: Um... No need to get into that!
+      dialogueText: "I\u2019m an amalgamation of Cephalopoda and a metaphysical anthropomorphic
+        sprite!"
       speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
       speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
     - speakerName: Dot
-      dialogueText: ...
+      dialogueText: A what???
       speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
       speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
     - speakerName: Buddy
-      dialogueText: "What a strange place.. Let\u2019s go EXPLORING!"
+      dialogueText: "I\u2019m just a floating octopus, pal! And I'm probably from
+        the same place as you, considering we got here at the same time!"
       speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
       speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
     - speakerName: Dot
-      dialogueText: "W-wait! What if there\u2019s danger--"
+      dialogueText: "Where... where <i>did</i> I come from? I don\u2019t really remember
+        anything..."
       speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
       speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
     - speakerName: Buddy
-      dialogueText: "LOOK! There\u2019s something shiny!"
+      dialogueText: "Now that I think about it... I can\u2019t remember anything
+        either!"
       speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
       speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -1
       choices: []
+    - speakerName: Dot
+      dialogueText: "Hmm... it looks like we\u2019re on some kind of island..."
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
     - speakerName: Buddy
-      dialogueText: AND PRETTY!!
+      dialogueText: Aha! Florida!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: Florida isn't an island! ..what even is Florida?
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Buddy
+      dialogueText: "No idea! Anyways, what a relaxing place! Let\u2019s go EXPLORING!"
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: "W-wait! What if there\u2019s danger-?!"
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Buddy
+      dialogueText: "Danger-schmanger! I\u2019ll protect you! Now let\u2019s look
+        around!"
       speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
       speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
       nextBranch: {fileID: 0}

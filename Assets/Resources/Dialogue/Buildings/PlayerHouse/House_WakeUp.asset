@@ -17,7 +17,16 @@ MonoBehaviour:
     segments:
     - speakerName: 
       dialogueText: You wake up the next morning feeling refreshed.
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices:
+      - {fileID: 11400000, guid: ade684c28a68b684aa66b07bcf5593f9, type: 2}
+    - speakerName: Buddy
+      dialogueText: Let's go out to meet Sally!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -99
       choices:

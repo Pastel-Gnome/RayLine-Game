@@ -17,6 +17,8 @@ public class SoundManager : MonoBehaviour
 	[SerializeField] AudioClip[] nightMusicClips;
 
 	[SerializeField] AudioClip[] questClips;
+	[SerializeField]
+	AudioClip[] itemClip;
 	[SerializeField] AudioClip[] footstepClips;
 
 	private void Start()
@@ -80,6 +82,16 @@ public class SoundManager : MonoBehaviour
 	public void PlayQuestSound(int questStage)
 	{
 		environSource.PlayOneShot(questClips[questStage]);
+	}
+
+	public void PlayItemSound()
+	{
+		environSource.PlayOneShot(itemClip[0]);
+	}
+
+	public void PlayClueSound()
+	{
+		environSource.PlayOneShot(itemClip[1]);
 	}
 
 	public void ToggleWalkSound(bool shouldPlay, int desTerrain = 2)

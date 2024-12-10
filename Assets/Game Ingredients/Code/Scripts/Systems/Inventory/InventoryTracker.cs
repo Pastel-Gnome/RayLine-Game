@@ -46,6 +46,7 @@ public class InventoryTracker : MonoBehaviour
     {
 		if (!items.Contains(desItem))
 		{
+			SoundManager.instance.PlayItemSound();
 			items.Add(desItem);
 			OnInventoryChange.Invoke();
 		}

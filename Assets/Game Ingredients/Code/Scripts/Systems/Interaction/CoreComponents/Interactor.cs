@@ -55,7 +55,7 @@ public class Interactor : MonoBehaviour
 			{
 				if (context.started && !DialogueManager.inProgress) 
 				{
-					interactable.Interact(this);
+					interactable.Interact();
 				}
 				if (!interactable.isPromptable) interactionPromptUI.HidePrompt();
 			}

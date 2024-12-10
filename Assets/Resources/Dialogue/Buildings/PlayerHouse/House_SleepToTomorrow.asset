@@ -16,8 +16,9 @@ MonoBehaviour:
     choiceText: Go to sleep.
     segments:
     - speakerName: 
-      dialogueText: You decide to go to sleep.
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      dialogueText: You drift off to sleep
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
-      actionIndex: 1
+      actionIndex: 0
       choices: []

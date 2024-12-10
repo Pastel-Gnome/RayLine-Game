@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 51bd16d3fc138234799c8960ccd34712
   - enabled: 1
-    path: Assets/Scenes/Prototyping/OutsideAreas/BeachKeyArea.unity
-    guid: 526db0f2bbd192749afd35bc63636b0d
-  - enabled: 1
     path: Assets/Scenes/BeachTutorial.unity
     guid: b9b94e1c0cf10b0458c89be332289431
   - enabled: 1
@@ -24,28 +21,16 @@ EditorBuildSettings:
     path: Assets/Scenes/TownMain.unity
     guid: 844234ca49e10604ab6deb36ed9d5c01
   - enabled: 1
-    path: Assets/Scenes/Prototyping/OutsideAreas/ForestHouse.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Prototyping/OutsideAreas/TownArea.unity
-    guid: efdb7824fcb352b4fbdb2261a54a5f6d
-  - enabled: 1
-    path: Assets/Scenes/Prototyping/InsideAreas/PlayerHouse.unity
-    guid: 43657f979ad0f6040873e00e93ce41ec
-  - enabled: 1
-    path: Assets/Scenes/Prototyping/InsideAreas/PlaytestEnd.unity
-    guid: 43656b89e2fd30a49a345003a9d9c473
-  - enabled: 1
-    path: Assets/Scenes/Prototyping/InsideAreas/SallyHouse.unity
-    guid: 5e90fc415ad7e70429e331311d7c14b8
-  - enabled: 1
-    path: Assets/Scenes/Prototyping/InsideAreas/GeneralStore.unity
+    path: Assets/Scenes/Buildings/GeneralStore.unity
     guid: 67b50e4e9600b574c94f07d8f5025e6a
   - enabled: 1
-    path: Assets/Scenes/Prototyping/DocumentationTest.unity
-    guid: 415b097989af6be4bbe3d57e7bad5799
+    path: Assets/Scenes/Buildings/TownHall.unity
+    guid: 1903716cc9559854a9e7a7edd75db63c
   - enabled: 1
-    path: Assets/Scenes/Prototyping/DocumentationTest 1.unity
-    guid: 03ab5f95403b3ba439bbd6af18e487f8
+    path: Assets/Scenes/Buildings/PlayerHouse.unity
+    guid: 4659003db8d85f048b9136032b504da6
+  - enabled: 1
+    path: Assets/Scenes/Buildings/PlaytestEnd.unity
+    guid: 4c18bd06b78fbc34eb8e984c3e7a9e7d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 85ab92223303ee945b591102b7f56f3c, type: 2}

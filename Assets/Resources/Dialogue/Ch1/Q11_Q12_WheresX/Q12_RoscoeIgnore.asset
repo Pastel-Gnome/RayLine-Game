@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Q12_RoscoeIgnore
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: 
+    segments:
+    - speakerName: Dot
+      dialogueText: I don't think he's going to be much help... he's too preoccupied
+        with that 'evil cheese' thing.
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []

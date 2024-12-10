@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
   m_Name: Q8_CheckIn
   m_EditorClassIdentifier: 
-  questName: Check In
+  questName: Uh, Help?!
   questDescription: Well that just happened. Maybe Sally or the mayor have some insight
     on this situation. They know the town best, after all.
   questGiver: Me
@@ -20,3 +20,4 @@ MonoBehaviour:
   questID: 8
   steps:
   - {fileID: 11400000, guid: 3e345b47ba669e546bc87a6f7ef45bbf, type: 2}
+  postQuestDialogue: {fileID: 0}

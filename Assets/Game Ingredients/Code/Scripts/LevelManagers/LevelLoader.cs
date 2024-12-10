@@ -41,6 +41,7 @@ public class LevelLoader : MonoBehaviour
 		if (instance == this)
 		{
 			PlayerMovement.EnableMovement();
+			DialogueManager.instance.EndDialogue();
 			PlayerInput playerInput = FindObjectOfType<PlayerInput>();
 			if (playerInput != null)
 			{

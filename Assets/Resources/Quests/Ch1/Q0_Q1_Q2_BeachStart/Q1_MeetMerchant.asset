@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf49070f9d891d0428675ba689714f93, type: 3}
   m_Name: Q1_MeetMerchant
   m_EditorClassIdentifier: 
-  questName: Meet The Merchant
-  questDescription: Buddy says there's a fishing merchant further down the beach.
-    Maybe they have some insights to share about this town.
+  questName: Say Hi!
+  questDescription: Buddy says there's someone further down the beach. Maybe you
+    can go say hi!
   questGiver: Buddy
   giverIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
   questID: 1

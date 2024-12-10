@@ -72,7 +72,10 @@ public class DialogueManager : MonoBehaviour
 		if (instance == this)
 		{
 			dialogueParent.SetActive(false);
-			progressUpdater.SetUpProgress();
+			CallAfterDelay.Create(0.1f, () =>
+			{
+				progressUpdater.SetUpProgress();
+			});
 		}
 	}
 

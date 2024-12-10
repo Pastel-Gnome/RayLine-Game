@@ -18,10 +18,11 @@ public class MessageClue : SaveableObj, IInteractable
 		uniqueId = UniqueID.CreateID(anomalyID.ToString() + cluePiece, transform);
 	}
 
-	public virtual void Interact(Interactor interactor)
+	public virtual void Interact()
 	{
 		if (!opened)
 		{
+			SoundManager.instance.PlayClueSound();
 			OpenClue();
 		} else
 		{
@@ -38,7 +39,7 @@ public class MessageClue : SaveableObj, IInteractable
 	protected virtual void ObtainClue()
     {
 		HiddenMessageManager.instance.CloseClueWindow();
-		HiddenMessageManager.instance.AddClueLetter(cluePiece);
+		HiddenMessageManager.instance.AddClueLetter(anomalyID, cluePiece);
 		SelfDestruct();
     }
 

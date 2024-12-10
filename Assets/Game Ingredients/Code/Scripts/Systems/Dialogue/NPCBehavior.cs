@@ -7,7 +7,7 @@ public class NPCBehavior : DialogueActivator
 
 	[SerializeField] protected Dialogue dialogue;
 
-	public override void Interact(Interactor interactor)
+	public override void Interact()
 	{
 		if (isPromptable)
         {

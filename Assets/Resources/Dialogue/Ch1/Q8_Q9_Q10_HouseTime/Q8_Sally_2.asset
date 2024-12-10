@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Q8_Sally_2
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: Show her.
+    segments:
+    - speakerName: Sally
+      dialogueText: WHAT IS THAT?!
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: "I DON\u2019T KNOW!!!"
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 0
+      choices: []
+    - speakerName: Sally
+      dialogueText: Where did you find this?!
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: Roscoe found a weird bush that looked... ALIVE! And I found this
+        weird thing in there! I have no idea what it is!
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Sally
+      dialogueText: "It doesn\u2019t even look like it\u2019s from this WORLD!"
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Sally
+      dialogueText: We HAVE to tell everyone about this, starting with my uncle!
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Sally
+      dialogueText: "Agh, darn! Town hall is probably closed by now... It\u2019s
+        starting to get dark and we shouldn\u2019t cause a commotion this late."
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: "You\u2019re right... we\u2019ll show it to him first thing in
+        the morning!"
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Sally
+      dialogueText: Oh, wait, do you have a place to stay for the night?
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: Your uncle said you might have a place I could stay, if that's
+        alright?
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Sally
+      dialogueText: Oh, yes, of course! My grandpa's old house has been empty for
+        ages, and I just so happen to have the key! You're more than welcome to stay
+        there.
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 1
+      choices: []
+    - speakerName: Sally
+      dialogueText: I'll head over there right now, it's just down the path on the
+        left!
+      speakerIcon: {fileID: 21300000, guid: e4226d3a0e51f90439f682009363b95f, type: 3}
+      speakerBkg: {fileID: 21300000, guid: 24578ba7d438cb14fbc62126740e80e8, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 2
+      choices: []

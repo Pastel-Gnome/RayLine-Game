@@ -13,12 +13,48 @@ MonoBehaviour:
   m_Name: Desc_FindBranchKey
   m_EditorClassIdentifier: 
   RootNode:
-    choiceText: Search it.
+    choiceText: Grab it.
     segments:
-    - speakerName: You
-      dialogueText: Oh, there's a key hanging on one of the branches!
-      speakerIcon: {fileID: 21300000, guid: 69245844120470745a477a90992dfc59, type: 3}
+    - speakerName: 
+      dialogueText: You pull out a shape that seems like it shouldn't exist.
+      speakerIcon: {fileID: 0}
       speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
       actionIndex: 0
+      choices: []
+    - speakerName: Buddy
+      dialogueText: What the bubbles?!?!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: What in the world is that?! It looks like some sort of... cube?
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Buddy
+      dialogueText: It looks kinda... dangerous... a cube shouldn't be here!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Dot
+      dialogueText: M-maybe we should tell someone about it?
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Buddy
+      dialogueText: Definitely, and right away! Who knows if it might explode on
+        us!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
+      actionIndex: 1
       choices: []

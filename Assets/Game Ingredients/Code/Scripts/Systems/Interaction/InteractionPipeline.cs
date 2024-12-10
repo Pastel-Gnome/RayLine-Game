@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static GameInfo;
 
 public class InteractionPipeline : MonoBehaviour
 {
@@ -8,6 +9,14 @@ public class InteractionPipeline : MonoBehaviour
     {
         InventoryTracker.instance.AddItem(desItem);
     }
+
+	public void AddCluePiece(string cluePiece)
+	{
+		string[] splitIDs = cluePiece.Split(',');
+		int anomalyID = int.Parse(splitIDs[1]);
+		char clueLetter = char.Parse(splitIDs[0]);
+		HiddenMessageManager.instance.AddClueLetter(anomalyID, clueLetter);
+	}
 
 	public void RemoveItem(int desItem)
 	{
@@ -26,11 +35,9 @@ public class InteractionPipeline : MonoBehaviour
         QuestManager.instance.AdvanceQuest(combinedQuestIDs);
     }
 
-	public void FixAnomalyDialogue(string anomalyType)
+	public void FixAnomalyDialogue(Dialogue anomalyDialogue)
 	{
-		DialogueNode anomalyNode = Resources.Load<Dialogue>("Dialogue/AnomalyFix_" + anomalyType).RootNode;
-
-		DialogueManager.instance.StartDialogue(anomalyNode, new List<UnityEngine.Events.UnityEvent>());
+		DialogueManager.instance.StartDialogue(anomalyDialogue.RootNode, new List<UnityEngine.Events.UnityEvent>());
 	}
 
 	public void DeleteObject(GameObject go)
@@ -68,8 +75,41 @@ public class InteractionPipeline : MonoBehaviour
 		DialogueManager.instance.progressUpdater.SetProgressDia(newDia);
 	}
 
+	public void SetProgressVis(bool newVis)
+	{
+		DialogueManager.instance.progressUpdater.SetProgressVisibility(newVis);
+	}
+
+	public void SetProgressActiveObj(int newState)
+	{
+		DialogueManager.instance.progressUpdater.SetProgressActiveObj(newState);
+	}
+
 	public void AddProgress()
 	{
 		DialogueManager.instance.progressUpdater.AddProgress();
+	}
+
+	public void EarlyEndDia()
+	{
+		DialogueManager.instance.EndDialogue();
+	}
+
+	public void EndPlaytest()
+	{
+		CallAfterDelay.Create(0.4f, () =>
+		{
+			GameInfo.instance.SetLocation(GameInfo.partOfTown.Inside, "PlaytestEnd");
+		});
+	}
+
+	public void AddCheese(int newCheese)
+	{
+		GameInfo.instance.AddCheese(newCheese);
+	}
+
+	public void SetWeird()
+	{
+		GameInfo.instance.SetTime(timeOfDay.Night);
 	}
 }

@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Mysterious Object
   id: 5
   description: ...what is this?
-  sprite: {fileID: 21300000, guid: 08f791d2775a7b84ba4b0fab2f782842, type: 3}
+  sprite: {fileID: 21300000, guid: 35f7e0a5d48c6da49b682788ff2d709a, type: 3}

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InsideManager : MonoBehaviour
@@ -11,7 +8,7 @@ public class InsideManager : MonoBehaviour
 
 	private void Start()
 	{
-		transform.GetComponent<DialogueActivator>().Interact(null);
+		transform.GetComponent<DialogueActivator>().Interact();
 	}
 
 	public void ExitToOutside()
@@ -19,14 +16,6 @@ public class InsideManager : MonoBehaviour
 		CallAfterDelay.Create(0.4f, () =>
 		{
 			GameInfo.instance.SetLocation(locationID, destinationScene, spawnLocation);
-		});
-	}
-
-	public void EndPlaytest()
-	{
-		CallAfterDelay.Create(0.4f, () =>
-		{
-			GameInfo.instance.SetLocation(GameInfo.partOfTown.Inside, "PlaytestEnd");
 		});
 	}
 }

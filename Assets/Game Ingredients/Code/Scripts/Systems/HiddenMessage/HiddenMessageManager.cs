@@ -21,7 +21,7 @@ public class HiddenMessageManager : MonoBehaviour
 	[SerializeField] Color notFoundColor = Color.white;
 	[SerializeField] Color foundColor = Color.yellow;
 
-	private StringBuilder clueLettersObtained = new StringBuilder();
+	private StringBuilder[] clueLettersObtained = new StringBuilder[2];
 	private StringBuilder inputtedLetters = new StringBuilder();
 	private string correctAnswer;
 	private int currInputIndex = -1;
@@ -41,6 +41,9 @@ public class HiddenMessageManager : MonoBehaviour
 
 		if (instance == this)
 		{
+			clueLettersObtained[0] = new StringBuilder();
+			clueLettersObtained[1] = new StringBuilder();
+
 			hiddenMessageParent = transform.GetChild(0).gameObject;
 			inputWindow = hiddenMessageParent.transform.GetChild(0).gameObject;
 			clueWindow = hiddenMessageParent.transform.GetChild(1).gameObject;
@@ -85,14 +88,14 @@ public class HiddenMessageManager : MonoBehaviour
 
 
 
-	public void AddClueLetter(char newLetter)
+	public void AddClueLetter(int anomalyID, char newLetter)
 	{
-		clueLettersObtained.Append(newLetter);
+		clueLettersObtained[anomalyID].Append(newLetter);
 	}
 
 	private void ClearClueLetters()
 	{
-		clueLettersObtained.Clear();
+		clueLettersObtained[currAnomaly.anomalyID].Clear();
 		
 	}
 
@@ -100,7 +103,7 @@ public class HiddenMessageManager : MonoBehaviour
 	{
 		foreach (Image buttonImage in letterButtonContainer.GetComponentsInChildren<Image>())
 		{
-			if(clueLettersObtained.ToString().Contains(buttonImage.name))
+			if(clueLettersObtained[currAnomaly.anomalyID].ToString().Contains(buttonImage.name))
 			{
 				buttonImage.color = foundColor;
 			} else

@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueEventTrigger : MonoBehaviour
 {
 	[SerializeField] bool physicalTrigger = true;
+	bool stayActivated = false;
 	DialogueActivator dialogueActivator;
 	int halfwayIndex, finalIndex;
 
@@ -20,7 +21,20 @@ public class DialogueEventTrigger : MonoBehaviour
 		if (physicalTrigger)
 		{
 			dialogueActivator.SetInteractable(true);
-			dialogueActivator.Interact(null);
+			dialogueActivator.Interact();
+		}
+	}
+
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+		if (physicalTrigger && collision.CompareTag("Player") && !stayActivated)
+		{
+			stayActivated = true;
+			CallAfterDelay.Create(0.2f, () =>
+			{
+				dialogueActivator.SetInteractable(true);
+				dialogueActivator.Interact();
+			});
 		}
 	}
 

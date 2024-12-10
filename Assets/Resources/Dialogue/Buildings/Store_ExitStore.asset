@@ -17,7 +17,15 @@ MonoBehaviour:
     segments:
     - speakerName: 
       dialogueText: You exit the store.
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
+      nextBranch: {fileID: 0}
+      actionIndex: 0
+      choices: []
+    - speakerName: 
+      dialogueText: 
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
       actionIndex: 0
       choices: []

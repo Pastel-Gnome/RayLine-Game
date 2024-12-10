@@ -22,10 +22,10 @@ MonoBehaviour:
       nextBranch: {fileID: 0}
       actionIndex: -99
       choices: []
-    - speakerName: You
+    - speakerName: Dot
       dialogueText: I guess no one is home.
-      speakerIcon: {fileID: 21300000, guid: 69245844120470745a477a90992dfc59, type: 3}
-      speakerBkg: {fileID: 0}
+      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
+      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
       nextBranch: {fileID: 0}
       actionIndex: -99
       choices: []

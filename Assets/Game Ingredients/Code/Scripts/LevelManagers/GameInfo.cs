@@ -13,6 +13,9 @@ public class GameInfo : MonoBehaviour
 	[SerializeField] timeOfDay gameTime = timeOfDay.Morning;
 	[SerializeField] partOfTown gameLocation = partOfTown.Beach;
 	private string spawnObjName = "";
+	public int townLoc = 0;
+
+	public int[] cheeseList = new int[5];
 
 	
 
@@ -66,7 +69,7 @@ public class GameInfo : MonoBehaviour
 
 	private void TimeSetup()
 	{
-		dayNight.SetTimeVisuals(gameTime);
+		//dayNight.SetTimeVisuals(gameTime);
 		SoundManager.instance.DetermineMusic((int)gameTime, (int)gameLocation);
 	}
 
@@ -80,19 +83,20 @@ public class GameInfo : MonoBehaviour
 		}
 	}
 
+	public void SetTime(timeOfDay newTime)
+	{
+		gameTime = newTime;
+	}
+
 	public partOfTown CheckLocation()
 	{
 		return gameLocation;
 	}
 
-	public void RegisterQuestInput(int questID)
+	public void AddCheese(int newCheese)
 	{
-		
-	}
-
-	public void AddQuestPiece(int questID)
-	{
-		
+		Debug.Log(cheeseList.Length + ", " + newCheese);
+		cheeseList[newCheese] = 1;
 	}
 
 	private void CreateNewPlayer()

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7a8e5753d34e47ad5fd36196f330f, type: 3}
+  m_Name: Desc_NiceShrub
+  m_EditorClassIdentifier: 
+  RootNode:
+    choiceText: Look at shrub.
+    segments:
+    - speakerName: 
+      dialogueText: It looks like something's peeking through the leaves of the bush.
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices: []
+    - speakerName: 
+      dialogueText: Grab it?
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
+      nextBranch: {fileID: 0}
+      actionIndex: -99
+      choices:
+      - {fileID: 11400000, guid: 13a61c90ee26c16499f9cb64e33dcd21, type: 2}

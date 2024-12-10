@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Desc_DontSearch
   m_EditorClassIdentifier: 
   RootNode:
-    choiceText: Don't search it.
+    choiceText: No.
     segments:
     - speakerName: 
-      dialogueText: You decide not to search it.
-      speakerColor: {r: 0, g: 0, b: 0, a: 0}
+      dialogueText: You decide to leave it be for now.
+      speakerIcon: {fileID: 0}
+      speakerBkg: {fileID: 0}
       nextBranch: {fileID: 0}
+      actionIndex: -99
       choices: []

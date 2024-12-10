@@ -23,12 +23,12 @@ public class DoorBehavior : DialogueActivator
 		audioSource = GetComponent<AudioSource>();
 	}
 
-	public override void Interact(Interactor interactor)
+	public override void Interact()
 	{
 		if (isUnlocked || (itemToUnlock >= 0 && InventoryTracker.instance.CheckItem(itemToUnlock)))
 		{
 			audioSource.PlayOneShot(doorClips[1]);
-			dialogueEvents[doorOpenIndex].Invoke();
+			if (doorOpenIndex >= 0) dialogueEvents[doorOpenIndex].Invoke();
 			GameInfo.instance.SetLocation(locationID, destinationSceneName); // add destinationDoor as a third argument if this door leads to a walkable area
 		} else if (isPromptable) // if door is locked but promptable
 		{
@@ -38,5 +38,10 @@ public class DoorBehavior : DialogueActivator
 				DialogueManager.instance.StartDialogue(description.RootNode, dialogueEvents);
 			}
 		}
+	}
+
+	public virtual void SetLockedState(bool newLockedState)
+	{
+		isUnlocked = !newLockedState;
 	}
 }

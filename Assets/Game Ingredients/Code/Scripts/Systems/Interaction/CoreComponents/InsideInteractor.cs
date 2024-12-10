@@ -16,7 +16,7 @@ public class InsideInteractor : MonoBehaviour
 		{
 			if (context.started) 
 			{
-				interactable.Interact(null);
+				interactable.Interact();
 			}
 		}
 	}

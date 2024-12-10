@@ -9,6 +9,7 @@ public class Anomaly : SaveableObj, IInteractable
 	[SerializeField] UnityEvent fixedEvent = new UnityEngine.Events.UnityEvent();
 	private Animator parentAnimator;
     private DialogueActivator parentDialogue;
+    private bool activated = false;
 
 	public bool isPromptable { get; set; } = true;
 
@@ -18,19 +19,29 @@ public class Anomaly : SaveableObj, IInteractable
 		CallAfterDelay.Create(0.1f, () => {
             parentAnimator = transform.parent.GetComponent<Animator>();
             parentDialogue = transform.parent.GetComponent<DialogueActivator>();
-            parentAnimator.SetTrigger("Flip");
+            AudioSource audio = GetComponent<AudioSource>();
+            
+			if (parentAnimator != null && parentAnimator.GetCurrentAnimatorStateInfo(0).IsName("TotallyNormal") && activated)
+            {
+				parentAnimator.SetTrigger("Flip");
+			}
 			parentDialogue.interactable = false;
 		}).transform.SetParent(transform);
 	}
 
-	public virtual void Interact(Interactor interactor)
+	public virtual void Interact()
     {
+        activated = true;
         OpenAnomaly();
 	}
 
 	public void FixAnomaly()
     {
-		parentAnimator.SetTrigger("Flip");
+        if (parentAnimator != null)
+        {
+			parentAnimator.SetTrigger("Flip");
+		}
+        
 		parentDialogue.interactable = true;
 
         fixedEvent.Invoke();
