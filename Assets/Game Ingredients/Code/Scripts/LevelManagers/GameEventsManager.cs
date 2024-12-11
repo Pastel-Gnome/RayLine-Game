@@ -74,6 +74,13 @@ public class GameEventsManager : MonoBehaviour
 		}
 	}
 
+	public bool CheckIfDeletable(GameObject desObj)
+	{
+		SaveableObj saveObj = desObj.GetComponent<SaveableObj>();
+		string desID = saveObj.uniqueId;
+		return deleteables.Contains(desID);
+	}
+
 	public void DestroyCluesAndAnomalies()
 	{
 		MessageClue fixedClue;

@@ -18,7 +18,7 @@ public class DialogueEventTrigger : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (physicalTrigger)
+		if (physicalTrigger && !GameEventsManager.instance.CheckIfDeletable(gameObject))
 		{
 			dialogueActivator.SetInteractable(true);
 			dialogueActivator.Interact();
@@ -27,7 +27,7 @@ public class DialogueEventTrigger : MonoBehaviour
 
 	private void OnTriggerStay2D(Collider2D collision)
 	{
-		if (physicalTrigger && collision.CompareTag("Player") && !stayActivated)
+		if (physicalTrigger && collision.CompareTag("Player") && !stayActivated && !GameEventsManager.instance.CheckIfDeletable(gameObject))
 		{
 			stayActivated = true;
 			CallAfterDelay.Create(0.2f, () =>

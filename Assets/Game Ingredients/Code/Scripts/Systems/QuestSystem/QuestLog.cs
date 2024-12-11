@@ -20,7 +20,6 @@ public class QuestLog : MonoBehaviour
 
 	private List<LogEntry> logEntries = new List<LogEntry>();
 	private List<int> entryIndexes = new List<int>();
-	private bool newMail = false;
 
 	public void CreateEntry(QuestInfoSO questInfo)
     {
