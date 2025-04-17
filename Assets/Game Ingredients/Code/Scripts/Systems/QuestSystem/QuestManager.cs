@@ -82,6 +82,13 @@ public class QuestManager : MonoBehaviour
 				questIDList.Add(questID);
 			}
 		}
+
+		if (questID == 3)
+		{
+			FinishQuestSilently(0);
+			FinishQuestSilently(1);
+			FinishQuestSilently(2);
+		}
 	}
 
 
@@ -138,6 +145,21 @@ public class QuestManager : MonoBehaviour
 		activeQuests.RemoveAt(questIndex);
 		SoundManager.instance.PlayQuestSound(2);
 	}
+
+	public void FinishQuestSilently(int questID)
+	{
+		int questIndex = activeQuests.FindIndex(q => q.questInfo.questID == questID);
+		if (questIndex != -1)
+		{
+			questLog.UpdateQuestStatus(questID, true);
+
+
+			Destroy(displays[questIndex].transform.parent.parent.gameObject);
+			displays.RemoveAt(questIndex);
+
+			activeQuests.RemoveAt(questIndex);
+		}
+	}
 }
 
 [Serializable]
@@ -145,6 +167,7 @@ public class Quest
 {
 	public QuestInfoSO questInfo;
 	List<bool> stepCompletion = new List<bool>();
+
 
 	public void SetUpQuest(QuestInfoSO desQuest)
 	{

@@ -20496,6 +20496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: 
+  deactivateOnStart: 0
   dialogueEvents:
   - m_PersistentCalls:
       m_Calls:
@@ -20828,6 +20829,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!20 &727375363 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7957408923518504627, guid: 2de7a86478c2143499e7874d1368c1bd, type: 3}
+  m_PrefabInstance: {fileID: 1390981470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &728805132 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8101258178072263361, guid: 712f9527bc543db40957aecef0890c8d, type: 3}
@@ -22600,6 +22606,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6714790133086353969, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6954823002018649349, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22712,6 +22722,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7545280610651791815, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545280610651791815, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681151600834709316, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 727375363}
     - target: {fileID: 8035963929614158099, guid: ff4729bf5e16d5240b3c140022af1962, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

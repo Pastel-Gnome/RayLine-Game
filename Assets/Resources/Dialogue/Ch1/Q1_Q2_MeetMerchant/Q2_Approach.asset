@@ -28,5 +28,13 @@ MonoBehaviour:
       speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
       speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
       nextBranch: {fileID: 0}
+      actionIndex: -1
+      choices: []
+    - speakerName: Buddy
+      dialogueText: Oo, oo! There's someone by the shop! They look much kinder than
+        that cranky guy back on the beach!
+      speakerIcon: {fileID: 21300000, guid: f6997d4262e03ff4a867f31f57c0490b, type: 3}
+      speakerBkg: {fileID: 21300000, guid: ac544c9731589eb45a9be6b75d316d64, type: 3}
+      nextBranch: {fileID: 0}
       actionIndex: 0
       choices: []

@@ -7,10 +7,15 @@ public class ProgressUpdater : MonoBehaviour
 {
     List<ProgressData> progressData = new List<ProgressData>();
     string tempID;
+
     Dialogue tempDia;
 	Dialogue tempDesc;
+
 	bool tempVisible = true;
 	int tempActivationState = 0; // 0 = unchanged, 1 = active, -1 = inactive
+
+	bool tempLocked = false;
+	int tempDoorKey = -99;
 
     public void SetUpProgress()
     {
@@ -25,6 +30,12 @@ public class ProgressUpdater : MonoBehaviour
 				if (data.activationState == 1)
 				{
 					obj.gameObject.SetActive(true);
+					obj.deactivateOnStart = false;
+				}
+				else if (data.activationState == -1)
+				{
+					obj.gameObject.SetActive(false);
+					obj.deactivateOnStart = true;
 				}
 
 				if (data.startingDesc != null)
@@ -40,6 +51,16 @@ public class ProgressUpdater : MonoBehaviour
 					diaActivator.UpdateDialogue(data.startingDialogue);
 					diaActivator.SetMainDiaActive(true);
 					diaActivator.SetInteractable(true);
+				}
+
+				DoorBehavior doorComponent = obj.GetComponent<DoorBehavior>();
+				if (doorComponent != null)
+				{
+					if (data.doorKey > -99)
+					{
+						doorComponent.SetItemReq(data.doorKey);
+					}
+					doorComponent.SetLockedState(data.isLocked);
 				}
 
 				SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
@@ -93,6 +114,16 @@ public class ProgressUpdater : MonoBehaviour
 		tempVisible = newVisible;
 	}
 
+	public void SetProgressDoorLock(bool newLocked)
+	{
+		tempLocked = newLocked;
+	}
+
+	public void SetProgressDoorKey(int newKey)
+	{
+		tempDoorKey = newKey;
+	}
+
 	public void AddProgress()
     {
 		ProgressData tempData = new ProgressData();
@@ -101,6 +132,8 @@ public class ProgressUpdater : MonoBehaviour
 		tempData.startingDesc = tempDesc;
 		tempData.isVisible = tempVisible;
 		tempData.activationState = tempActivationState;
+		tempData.isLocked = tempLocked;
+		tempData.doorKey = tempDoorKey;
 		progressData.Add(tempData);
 
 		tempID = string.Empty;
@@ -113,9 +146,14 @@ public class ProgressUpdater : MonoBehaviour
 	public struct ProgressData
 	{
 		public string objID;
+
 		public Dialogue startingDialogue;
 		public Dialogue startingDesc;
+
 		public bool isVisible;
 		public int activationState;
+
+		public bool isLocked;
+		public int doorKey;
 	}
 }

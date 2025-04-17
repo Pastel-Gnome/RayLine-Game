@@ -85,6 +85,16 @@ public class InteractionPipeline : MonoBehaviour
 		DialogueManager.instance.progressUpdater.SetProgressActiveObj(newState);
 	}
 
+	public void SetProgressDoorLock(bool newDoorLock)
+	{
+		DialogueManager.instance.progressUpdater.SetProgressDoorLock(newDoorLock);
+	}
+
+	public void SetProgressDoorKey(int newDoorKey)
+	{
+		DialogueManager.instance.progressUpdater.SetProgressDoorKey(newDoorKey);
+	}
+
 	public void AddProgress()
 	{
 		DialogueManager.instance.progressUpdater.AddProgress();

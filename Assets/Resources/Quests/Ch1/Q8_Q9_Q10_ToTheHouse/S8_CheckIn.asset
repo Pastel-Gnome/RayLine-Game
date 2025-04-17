@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d642a9eb0c0359428f893e4dfe5661a, type: 3}
   m_Name: S8_CheckIn
   m_EditorClassIdentifier: 
-  stepName: Speak to Sally or the mayor
+  stepName: Speak to Sally

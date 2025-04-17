@@ -23,13 +23,6 @@ MonoBehaviour:
       actionIndex: -1
       choices: []
     - speakerName: Dot
-      dialogueText: "What\u2019s going on?! Why doesn\u2019t anyone remember Sally?!"
-      speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
-      speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}
-      nextBranch: {fileID: 0}
-      actionIndex: -1
-      choices: []
-    - speakerName: Dot
       dialogueText: We have to find her, Buddy...
       speakerIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
       speakerBkg: {fileID: 21300000, guid: a65be46bd8f25ea45887454e2b147ec3, type: 3}

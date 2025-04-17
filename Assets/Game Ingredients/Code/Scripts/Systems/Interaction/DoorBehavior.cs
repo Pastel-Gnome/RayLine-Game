@@ -44,4 +44,9 @@ public class DoorBehavior : DialogueActivator
 	{
 		isUnlocked = !newLockedState;
 	}
+
+	public virtual void SetItemReq(int newItemReq)
+	{
+		itemToUnlock = newItemReq;
+	}
 }

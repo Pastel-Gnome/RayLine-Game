@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Q8_CheckIn
   m_EditorClassIdentifier: 
   questName: Uh, Help?!
-  questDescription: Well that just happened. Maybe Sally or the mayor have some insight
-    on this situation. They know the town best, after all.
+  questDescription: Well that just happened. Maybe Sally has some insight on this
+    situation. They know the town best, after all.
   questGiver: Me
   giverIcon: {fileID: 21300000, guid: 9088c58d64497cd43bdbdf146db7c8a2, type: 3}
   questID: 8
